@@ -189,7 +189,7 @@ class MONAILabelWidget(ScriptedLoadableModuleWidget, VTKObservationMixin):
 
         self.scribblesMode = None
         self.multi_label = False
-        
+
         self.directory_old_segmentations = str(qt.QFileDialog.getExistingDirectory(self.parent, "Select directory to old segmentations:"))
 
     def setup(self):
@@ -1113,9 +1113,9 @@ class MONAILabelWidget(ScriptedLoadableModuleWidget, VTKObservationMixin):
 
         if self.info.get("labels"):
             self.updateSegmentationMask(None, self.info.get("labels"))
-                                        
+
             mypath = os.path.join(self.directory_old_segmentations, str(sample["id"]) + '.nii.gz')
-            
+
             if os.path.exists(mypath):
                 slicer.util.loadSegmentation(mypath)
 
