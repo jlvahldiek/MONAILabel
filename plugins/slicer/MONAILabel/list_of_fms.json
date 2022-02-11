@@ -1,0 +1,4016 @@
+{
+    "8060762": [
+        {
+            "kind": "ZVK",
+            "path": "8060762/0000/ZVK_1.nii",
+            "tip_path": "8060762/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "8060762/0000/drainage_1.nii"
+        }
+    ],
+    "5178422": [
+        {
+            "kind": "ZVK",
+            "path": "5178422/0000/ZVK_1.nii",
+            "tip_path": "5178422/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12225463": [
+        {
+            "kind": "trachealtube",
+            "path": "12225463/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12225463/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12225463/0000/ZVK_1.nii",
+            "tip_path": "12225463/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12225463/0000/drainage_1.nii"
+        }
+    ],
+    "11085589": [
+        {
+            "kind": "trachealtube",
+            "path": "11085589/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "11085589/0000/ZVK_1.nii",
+            "tip_path": "11085589/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "5186981": [
+        {
+            "kind": "trachealtube",
+            "path": "5186981/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "5186981/0000/ZVK_1.nii",
+            "tip_path": "5186981/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "5186981/0000/ZVK_2.nii",
+            "tip_path": "5186981/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "10599372": [
+        {
+            "kind": "trachealtube",
+            "path": "10599372/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "10599372/0000/ZVK_1.nii",
+            "tip_path": "10599372/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "5184136": [
+        {
+            "kind": "trachealtube",
+            "path": "5184136/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "5184136/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "5184136/0000/ZVK_1.nii",
+            "tip_path": "5184136/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "5184136/0000/ZVK_2.nii",
+            "tip_path": "5184136/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12254474": [
+        {
+            "kind": "Magensonde",
+            "path": "12254474/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12254474/0000/ZVK_1.nii",
+            "tip_path": "12254474/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6651759": [],
+    "12259174": [
+        {
+            "kind": "trachealtube",
+            "path": "12259174/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12259174/0000/ZVK_1.nii",
+            "tip_path": "12259174/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12259174/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12259174/0000/drainage_2.nii"
+        }
+    ],
+    "10854182": [
+        {
+            "kind": "trachealtube",
+            "path": "10854182/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "10854182/0000/ZVK_1.nii",
+            "tip_path": "10854182/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12269598": [
+        {
+            "kind": "trachealtube",
+            "path": "12269598/0000/trachealtube.nii"
+        }
+    ],
+    "12272448": [
+        {
+            "kind": "trachealtube",
+            "path": "12272448/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12272448/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12272448/0000/ZVK_1.nii",
+            "tip_path": "12272448/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12272448/0000/ZVK_2.nii",
+            "tip_path": "12272448/0000/ZVK_2_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12272448/0000/drainage_1.nii"
+        }
+    ],
+    "9181238": [
+        {
+            "kind": "trachealtube",
+            "path": "9181238/0000/trachealtube.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "9181238/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "9181238/0000/drainage_2.nii"
+        }
+    ],
+    "12224191": [
+        {
+            "kind": "trachealtube",
+            "path": "12224191/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12224191/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12224191/0000/ZVK_1.nii",
+            "tip_path": "12224191/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "5178611": [
+        {
+            "kind": "ZVK",
+            "path": "5178611/0000/ZVK_1.nii",
+            "tip_path": "5178611/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12209292": [
+        {
+            "kind": "trachealtube",
+            "path": "12209292/0000/trachealtube.nii"
+        }
+    ],
+    "12259776": [],
+    "12196618": [
+        {
+            "kind": "trachealtube",
+            "path": "12196618/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12196618/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12196618/0000/ZVK_1.nii",
+            "tip_path": "12196618/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12196618/0000/drainage_1.nii"
+        }
+    ],
+    "6667571": [
+        {
+            "kind": "ZVK",
+            "path": "6667571/0000/ZVK_1.nii",
+            "tip_path": "6667571/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6667571/0000/ZVK_2.nii",
+            "tip_path": "6667571/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12247585": [
+        {
+            "kind": "trachealtube",
+            "path": "12247585/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12247585/0000/ZVK_1.nii",
+            "tip_path": "12247585/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12224977": [
+        {
+            "kind": "Magensonde",
+            "path": "12224977/0000/Magensonde.nii"
+        }
+    ],
+    "12247607": [
+        {
+            "kind": "trachealtube",
+            "path": "12247607/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12247607/0000/ZVK_1.nii",
+            "tip_path": "12247607/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6677307": [],
+    "10111911": [
+        {
+            "kind": "trachealtube",
+            "path": "10111911/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "10111911/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "10111911/0000/ZVK_1.nii",
+            "tip_path": "10111911/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6666400": [
+        {
+            "kind": "trachealtube",
+            "path": "6666400/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6666400/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6666400/0000/ZVK_1.nii",
+            "tip_path": "6666400/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6666400/0000/ZVK_2.nii",
+            "tip_path": "6666400/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12241516": [
+        {
+            "kind": "Magensonde",
+            "path": "12241516/0000/Magensonde.nii"
+        }
+    ],
+    "6678939": [
+        {
+            "kind": "Magensonde",
+            "path": "6678939/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6678939/0000/ZVK_1.nii",
+            "tip_path": "6678939/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6678939/0000/drainage_1.nii"
+        }
+    ],
+    "12200986": [
+        {
+            "kind": "Magensonde",
+            "path": "12200986/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12200986/0000/ZVK_1.nii",
+            "tip_path": "12200986/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12259057": [
+        {
+            "kind": "trachealtube",
+            "path": "12259057/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12259057/0000/ZVK_1.nii",
+            "tip_path": "12259057/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12259057/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12259057/0000/drainage_2.nii"
+        }
+    ],
+    "6690530": [
+        {
+            "kind": "trachealtube",
+            "path": "6690530/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6690530/0000/ZVK_1.nii",
+            "tip_path": "6690530/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6690530/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6690530/0000/drainage_2.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6690530/0000/drainage_3.nii"
+        }
+    ],
+    "6689000": [
+        {
+            "kind": "Magensonde",
+            "path": "6689000/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6689000/0000/ZVK_1.nii",
+            "tip_path": "6689000/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6689000/0000/drainage_1.nii"
+        }
+    ],
+    "12271125": [],
+    "12256156": [
+        {
+            "kind": "trachealtube",
+            "path": "12256156/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12256156/0000/Magensonde.nii"
+        }
+    ],
+    "12203280": [
+        {
+            "kind": "trachealtube",
+            "path": "12203280/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12203280/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12203280/0000/ZVK_1.nii",
+            "tip_path": "12203280/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12203280/0000/drainage_1.nii"
+        }
+    ],
+    "12249130": [],
+    "5183987": [
+        {
+            "kind": "trachealtube",
+            "path": "5183987/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "5183987/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "5183987/0000/ZVK_1.nii",
+            "tip_path": "5183987/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12274787": [
+        {
+            "kind": "ZVK",
+            "path": "12274787/0000/ZVK_1.nii",
+            "tip_path": "12274787/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12225865": [
+        {
+            "kind": "trachealtube",
+            "path": "12225865/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12225865/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12225865/0000/ZVK_1.nii",
+            "tip_path": "12225865/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12221127": [
+        {
+            "kind": "drainage",
+            "path": "12221127/0000/drainage_1.nii"
+        }
+    ],
+    "12200952": [
+        {
+            "kind": "trachealtube",
+            "path": "12200952/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12200952/0000/Magensonde.nii"
+        }
+    ],
+    "12214104": [
+        {
+            "kind": "trachealtube",
+            "path": "12214104/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12214104/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12214104/0000/ZVK_1.nii",
+            "tip_path": "12214104/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12214104/0000/ZVK_2.nii",
+            "tip_path": "12214104/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12221009": [
+        {
+            "kind": "trachealtube",
+            "path": "12221009/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12221009/0000/ZVK_1.nii",
+            "tip_path": "12221009/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12240712": [
+        {
+            "kind": "drainage",
+            "path": "12240712/0000/drainage_1.nii"
+        }
+    ],
+    "6685828": [
+        {
+            "kind": "ZVK",
+            "path": "6685828/0000/ZVK_1.nii",
+            "tip_path": "6685828/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6685828/0000/drainage_1.nii"
+        }
+    ],
+    "6657598": [
+        {
+            "kind": "trachealtube",
+            "path": "6657598/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6657598/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6657598/0000/ZVK_1.nii",
+            "tip_path": "6657598/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6657598/0000/ZVK_2.nii",
+            "tip_path": "6657598/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "6660560": [],
+    "12258573": [],
+    "12273332": [],
+    "12198612": [],
+    "12228517": [
+        {
+            "kind": "ZVK",
+            "path": "12228517/0000/ZVK_1.nii",
+            "tip_path": "12228517/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6681096": [
+        {
+            "kind": "trachealtube",
+            "path": "6681096/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6681096/0000/ZVK_1.nii",
+            "tip_path": "6681096/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12206386": [],
+    "6648663": [
+        {
+            "kind": "trachealtube",
+            "path": "6648663/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6648663/0000/ZVK_1.nii",
+            "tip_path": "6648663/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6648663/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6648663/0000/drainage_2.nii"
+        }
+    ],
+    "12239007": [
+        {
+            "kind": "ZVK",
+            "path": "12239007/0000/ZVK_1.nii",
+            "tip_path": "12239007/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12258171": [
+        {
+            "kind": "trachealtube",
+            "path": "12258171/0000/trachealtube.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12258171/0000/drainage_1.nii"
+        }
+    ],
+    "6659570": [
+        {
+            "kind": "drainage",
+            "path": "6659570/0000/drainage_1.nii"
+        }
+    ],
+    "9308558": [],
+    "12210169": [
+        {
+            "kind": "trachealtube",
+            "path": "12210169/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12210169/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12210169/0000/ZVK_1.nii",
+            "tip_path": "12210169/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12247946": [
+        {
+            "kind": "trachealtube",
+            "path": "12247946/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12247946/0000/Magensonde.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12247946/0000/drainage_1.nii"
+        }
+    ],
+    "6681268": [
+        {
+            "kind": "ZVK",
+            "path": "6681268/0000/ZVK_1.nii",
+            "tip_path": "6681268/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6674026": [
+        {
+            "kind": "ZVK",
+            "path": "6674026/0000/ZVK_1.nii",
+            "tip_path": "6674026/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "7537804": [
+        {
+            "kind": "ZVK",
+            "path": "7537804/0000/ZVK_1.nii",
+            "tip_path": "7537804/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "7537804/0000/ZVK_2.nii",
+            "tip_path": "7537804/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12230061": [],
+    "6677375": [
+        {
+            "kind": "Magensonde",
+            "path": "6677375/0000/Magensonde.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6677375/0000/drainage_1.nii"
+        }
+    ],
+    "6646073": [
+        {
+            "kind": "trachealtube",
+            "path": "6646073/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6646073/0000/ZVK_1.nii",
+            "tip_path": "6646073/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6646073/0000/drainage_1.nii"
+        }
+    ],
+    "5185692": [
+        {
+            "kind": "trachealtube",
+            "path": "5185692/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "5185692/0000/ZVK_1.nii",
+            "tip_path": "5185692/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6673849": [],
+    "6659727": [
+        {
+            "kind": "Magensonde",
+            "path": "6659727/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6659727/0000/ZVK_1.nii",
+            "tip_path": "6659727/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6659727/0000/ZVK_2.nii",
+            "tip_path": "6659727/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "6654631": [
+        {
+            "kind": "trachealtube",
+            "path": "6654631/0000/trachealtube.nii"
+        }
+    ],
+    "10194119": [
+        {
+            "kind": "trachealtube",
+            "path": "10194119/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "10194119/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "10194119/0000/ZVK_1.nii",
+            "tip_path": "10194119/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "10194119/0000/ZVK_2.nii",
+            "tip_path": "10194119/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "5178786": [
+        {
+            "kind": "trachealtube",
+            "path": "5178786/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "5178786/0000/Magensonde.nii"
+        }
+    ],
+    "12203258": [
+        {
+            "kind": "trachealtube",
+            "path": "12203258/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12203258/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12203258/0000/ZVK_1.nii",
+            "tip_path": "12203258/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12203258/0000/drainage_1.nii"
+        }
+    ],
+    "12219393": [
+        {
+            "kind": "trachealtube",
+            "path": "12219393/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12219393/0000/ZVK_1.nii",
+            "tip_path": "12219393/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6675886": [
+        {
+            "kind": "trachealtube",
+            "path": "6675886/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6675886/0000/ZVK_1.nii",
+            "tip_path": "6675886/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6683773": [],
+    "12204512": [
+        {
+            "kind": "Magensonde",
+            "path": "12204512/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12204512/0000/ZVK_1.nii",
+            "tip_path": "12204512/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12204512/0000/ZVK_2.nii",
+            "tip_path": "12204512/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12232244": [
+        {
+            "kind": "ZVK",
+            "path": "12232244/0000/ZVK_1.nii",
+            "tip_path": "12232244/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12232244/0000/ZVK_2.nii",
+            "tip_path": "12232244/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12230012": [
+        {
+            "kind": "ZVK",
+            "path": "12230012/0000/ZVK_1.nii",
+            "tip_path": "12230012/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "5177258": [
+        {
+            "kind": "trachealtube",
+            "path": "5177258/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "5177258/0000/ZVK_1.nii",
+            "tip_path": "5177258/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12203416": [
+        {
+            "kind": "trachealtube",
+            "path": "12203416/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12203416/0000/Magensonde.nii"
+        }
+    ],
+    "6646936": [
+        {
+            "kind": "Magensonde",
+            "path": "6646936/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6646936/0000/ZVK_1.nii",
+            "tip_path": "6646936/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6646936/0000/ZVK_2.nii",
+            "tip_path": "6646936/0000/ZVK_2_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6646936/0000/drainage_1.nii"
+        }
+    ],
+    "6648616": [],
+    "5179770": [
+        {
+            "kind": "trachealtube",
+            "path": "5179770/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "5179770/0000/ZVK_1.nii",
+            "tip_path": "5179770/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "5179770/0000/drainage_1.nii"
+        }
+    ],
+    "6678739": [
+        {
+            "kind": "ZVK",
+            "path": "6678739/0000/ZVK_1.nii",
+            "tip_path": "6678739/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "10730016": [
+        {
+            "kind": "trachealtube",
+            "path": "10730016/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "10730016/0000/ZVK_1.nii",
+            "tip_path": "10730016/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "10730016/0000/ZVK_2.nii",
+            "tip_path": "10730016/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12207841": [
+        {
+            "kind": "ZVK",
+            "path": "12207841/0000/ZVK_1.nii",
+            "tip_path": "12207841/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6646781": [],
+    "12239076": [
+        {
+            "kind": "trachealtube",
+            "path": "12239076/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12239076/0000/Magensonde.nii"
+        }
+    ],
+    "12228876": [
+        {
+            "kind": "Magensonde",
+            "path": "12228876/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12228876/0000/ZVK_1.nii",
+            "tip_path": "12228876/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12228876/0000/ZVK_2.nii",
+            "tip_path": "12228876/0000/ZVK_2_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12228876/0000/drainage_1.nii"
+        }
+    ],
+    "5184258": [],
+    "12245175": [
+        {
+            "kind": "ZVK",
+            "path": "12245175/0000/ZVK_1.nii",
+            "tip_path": "12245175/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12226016": [
+        {
+            "kind": "ZVK",
+            "path": "12226016/0000/ZVK_1.nii",
+            "tip_path": "12226016/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "9282656": [
+        {
+            "kind": "Magensonde",
+            "path": "9282656/0000/Magensonde.nii"
+        }
+    ],
+    "5183388": [
+        {
+            "kind": "ZVK",
+            "path": "5183388/0000/ZVK_1.nii",
+            "tip_path": "5183388/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "list_of_fms.json": [],
+    "6659015": [
+        {
+            "kind": "trachealtube",
+            "path": "6659015/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6659015/0000/ZVK_1.nii",
+            "tip_path": "6659015/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "7119947": [
+        {
+            "kind": "trachealtube",
+            "path": "7119947/0000/trachealtube.nii"
+        }
+    ],
+    "12273455": [
+        {
+            "kind": "trachealtube",
+            "path": "12273455/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12273455/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12273455/0000/ZVK_1.nii",
+            "tip_path": "12273455/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12269313": [
+        {
+            "kind": "drainage",
+            "path": "12269313/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12269313/0000/drainage_2.nii"
+        }
+    ],
+    "6690354": [],
+    "12223068": [
+        {
+            "kind": "trachealtube",
+            "path": "12223068/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12223068/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12223068/0000/ZVK_1.nii",
+            "tip_path": "12223068/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12223068/0000/ZVK_2.nii",
+            "tip_path": "12223068/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12247893": [
+        {
+            "kind": "ZVK",
+            "path": "12247893/0000/ZVK_1.nii",
+            "tip_path": "12247893/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12247893/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12247893/0000/drainage_2.nii"
+        }
+    ],
+    "12196617": [
+        {
+            "kind": "ZVK",
+            "path": "12196617/0000/ZVK_1.nii",
+            "tip_path": "12196617/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6657089": [
+        {
+            "kind": "trachealtube",
+            "path": "6657089/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6657089/0000/ZVK_1.nii",
+            "tip_path": "6657089/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6657089/0000/ZVK_2.nii",
+            "tip_path": "6657089/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12251695": [
+        {
+            "kind": "trachealtube",
+            "path": "12251695/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12251695/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12251695/0000/ZVK_1.nii",
+            "tip_path": "12251695/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "10720129": [
+        {
+            "kind": "trachealtube",
+            "path": "10720129/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "10720129/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "10720129/0000/ZVK_1.nii",
+            "tip_path": "10720129/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "10720129/0000/ZVK_2.nii",
+            "tip_path": "10720129/0000/ZVK_2_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "10720129/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "10720129/0000/drainage_2.nii"
+        }
+    ],
+    "12247944": [
+        {
+            "kind": "trachealtube",
+            "path": "12247944/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12247944/0000/ZVK_1.nii",
+            "tip_path": "12247944/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12206472": [
+        {
+            "kind": "ZVK",
+            "path": "12206472/0000/ZVK_1.nii",
+            "tip_path": "12206472/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6662775": [
+        {
+            "kind": "ZVK",
+            "path": "6662775/0000/ZVK_1.nii",
+            "tip_path": "6662775/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12203158": [
+        {
+            "kind": "drainage",
+            "path": "12203158/0000/drainage_1.nii"
+        }
+    ],
+    "11981510": [
+        {
+            "kind": "trachealtube",
+            "path": "11981510/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "11981510/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "11981510/0000/ZVK_1.nii",
+            "tip_path": "11981510/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "11981510/0000/ZVK_2.nii",
+            "tip_path": "11981510/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12236201": [
+        {
+            "kind": "trachealtube",
+            "path": "12236201/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12236201/0000/ZVK_1.nii",
+            "tip_path": "12236201/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12232190": [
+        {
+            "kind": "Magensonde",
+            "path": "12232190/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12232190/0000/ZVK_1.nii",
+            "tip_path": "12232190/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12254992": [
+        {
+            "kind": "drainage",
+            "path": "12254992/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12254992/0000/drainage_2.nii"
+        }
+    ],
+    "6661793": [
+        {
+            "kind": "trachealtube",
+            "path": "6661793/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6661793/0000/ZVK_1.nii",
+            "tip_path": "6661793/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "9253961": [
+        {
+            "kind": "trachealtube",
+            "path": "9253961/0000/trachealtube.nii"
+        }
+    ],
+    "6678629": [
+        {
+            "kind": "ZVK",
+            "path": "6678629/0000/ZVK_1.nii",
+            "tip_path": "6678629/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6678629/0000/ZVK_2.nii",
+            "tip_path": "6678629/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12269360": [
+        {
+            "kind": "ZVK",
+            "path": "12269360/0000/ZVK_1.nii",
+            "tip_path": "12269360/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12269360/0000/ZVK_2.nii",
+            "tip_path": "12269360/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "6670357": [],
+    "12260056": [],
+    "6679580": [],
+    "9380778": [],
+    "6675630": [],
+    "6671155": [
+        {
+            "kind": "trachealtube",
+            "path": "6671155/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6671155/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6671155/0000/ZVK_1.nii",
+            "tip_path": "6671155/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6671155/0000/ZVK_2.nii",
+            "tip_path": "6671155/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "6653365": [
+        {
+            "kind": "trachealtube",
+            "path": "6653365/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6653365/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6653365/0000/ZVK_1.nii",
+            "tip_path": "6653365/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6653365/0000/drainage_1.nii"
+        }
+    ],
+    "12214566": [
+        {
+            "kind": "trachealtube",
+            "path": "12214566/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12214566/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12214566/0000/ZVK_1.nii",
+            "tip_path": "12214566/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12261454": [
+        {
+            "kind": "ZVK",
+            "path": "12261454/0000/ZVK_1.nii",
+            "tip_path": "12261454/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12261454/0000/drainage_1.nii"
+        }
+    ],
+    "12203050": [
+        {
+            "kind": "trachealtube",
+            "path": "12203050/0000/trachealtube.nii"
+        }
+    ],
+    "12230096": [
+        {
+            "kind": "trachealtube",
+            "path": "12230096/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12230096/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12230096/0000/ZVK_1.nii",
+            "tip_path": "12230096/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12230096/0000/ZVK_2.nii",
+            "tip_path": "12230096/0000/ZVK_2_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12230096/0000/ZVK_3.nii",
+            "tip_path": "12230096/0000/ZVK_3_tip.nii"
+        }
+    ],
+    "5176855": [
+        {
+            "kind": "trachealtube",
+            "path": "5176855/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "5176855/0000/ZVK_1.nii",
+            "tip_path": "5176855/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "5176855/0000/ZVK_2.nii",
+            "tip_path": "5176855/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12227405": [
+        {
+            "kind": "trachealtube",
+            "path": "12227405/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12227405/0000/ZVK_1.nii",
+            "tip_path": "12227405/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6692045": [
+        {
+            "kind": "Magensonde",
+            "path": "6692045/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6692045/0000/ZVK_1.nii",
+            "tip_path": "6692045/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6692045/0000/drainage_1.nii"
+        }
+    ],
+    "12233319": [
+        {
+            "kind": "Magensonde",
+            "path": "12233319/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12233319/0000/ZVK_1.nii",
+            "tip_path": "12233319/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12243232": [],
+    "12269858": [
+        {
+            "kind": "trachealtube",
+            "path": "12269858/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12269858/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12269858/0000/ZVK_1.nii",
+            "tip_path": "12269858/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12269858/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12269858/0000/drainage_2.nii"
+        }
+    ],
+    "12236628": [
+        {
+            "kind": "ZVK",
+            "path": "12236628/0000/ZVK_1.nii",
+            "tip_path": "12236628/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12236628/0000/drainage_1.nii"
+        }
+    ],
+    "12264793": [
+        {
+            "kind": "drainage",
+            "path": "12264793/0000/drainage_1.nii"
+        }
+    ],
+    "9619120": [
+        {
+            "kind": "trachealtube",
+            "path": "9619120/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "9619120/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "9619120/0000/ZVK_1.nii",
+            "tip_path": "9619120/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6692052": [
+        {
+            "kind": "ZVK",
+            "path": "6692052/0000/ZVK_1.nii",
+            "tip_path": "6692052/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12195994": [
+        {
+            "kind": "ZVK",
+            "path": "12195994/0000/ZVK_1.nii",
+            "tip_path": "12195994/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6690633": [
+        {
+            "kind": "trachealtube",
+            "path": "6690633/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6690633/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6690633/0000/ZVK_1.nii",
+            "tip_path": "6690633/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6690633/0000/ZVK_2.nii",
+            "tip_path": "6690633/0000/ZVK_2_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6690633/0000/drainage_1.nii"
+        }
+    ],
+    "6664184": [
+        {
+            "kind": "Magensonde",
+            "path": "6664184/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6664184/0000/ZVK_1.nii",
+            "tip_path": "6664184/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6664184/0000/ZVK_2.nii",
+            "tip_path": "6664184/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12237220": [
+        {
+            "kind": "ZVK",
+            "path": "12237220/0000/ZVK_1.nii",
+            "tip_path": "12237220/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6664303": [
+        {
+            "kind": "Magensonde",
+            "path": "6664303/0000/Magensonde.nii"
+        }
+    ],
+    "10158152": [
+        {
+            "kind": "trachealtube",
+            "path": "10158152/0000/trachealtube.nii"
+        }
+    ],
+    "5184243": [
+        {
+            "kind": "trachealtube",
+            "path": "5184243/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "5184243/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "5184243/0000/ZVK_1.nii",
+            "tip_path": "5184243/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "5184243/0000/ZVK_2.nii",
+            "tip_path": "5184243/0000/ZVK_2_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "5184243/0000/drainage_1.nii"
+        }
+    ],
+    "12214432": [
+        {
+            "kind": "trachealtube",
+            "path": "12214432/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12214432/0000/ZVK_1.nii",
+            "tip_path": "12214432/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12214432/0000/ZVK_2.nii",
+            "tip_path": "12214432/0000/ZVK_2_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12214432/0000/ZVK_3.nii",
+            "tip_path": "12214432/0000/ZVK_3_tip.nii"
+        }
+    ],
+    "6652631": [],
+    "8714330": [
+        {
+            "kind": "trachealtube",
+            "path": "8714330/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "8714330/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "8714330/0000/ZVK_1.nii",
+            "tip_path": "8714330/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12207853": [
+        {
+            "kind": "ZVK",
+            "path": "12207853/0000/ZVK_1.nii",
+            "tip_path": "12207853/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12207853/0000/drainage_1.nii"
+        }
+    ],
+    "10150779": [
+        {
+            "kind": "trachealtube",
+            "path": "10150779/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "10150779/0000/ZVK_1.nii",
+            "tip_path": "10150779/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6686946": [
+        {
+            "kind": "ZVK",
+            "path": "6686946/0000/ZVK_1.nii",
+            "tip_path": "6686946/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "8289951": [
+        {
+            "kind": "ZVK",
+            "path": "8289951/0000/ZVK_1.nii",
+            "tip_path": "8289951/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "8289951/0000/drainage_1.nii"
+        }
+    ],
+    "12270681": [
+        {
+            "kind": "trachealtube",
+            "path": "12270681/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12270681/0000/Magensonde.nii"
+        }
+    ],
+    "6684176": [
+        {
+            "kind": "trachealtube",
+            "path": "6684176/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6684176/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6684176/0000/ZVK_1.nii",
+            "tip_path": "6684176/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6646767": [],
+    "12269557": [
+        {
+            "kind": "Magensonde",
+            "path": "12269557/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12269557/0000/ZVK_1.nii",
+            "tip_path": "12269557/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6674381": [],
+    "12243108": [
+        {
+            "kind": "trachealtube",
+            "path": "12243108/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12243108/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12243108/0000/ZVK_1.nii",
+            "tip_path": "12243108/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "5180821": [
+        {
+            "kind": "trachealtube",
+            "path": "5180821/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "5180821/0000/ZVK_1.nii",
+            "tip_path": "5180821/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "5180821/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "5180821/0000/drainage_2.nii"
+        }
+    ],
+    "12230196": [
+        {
+            "kind": "ZVK",
+            "path": "12230196/0000/ZVK_1.nii",
+            "tip_path": "12230196/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12230196/0000/drainage_1.nii"
+        }
+    ],
+    "12208894": [],
+    "12256313": [
+        {
+            "kind": "ZVK",
+            "path": "12256313/0000/ZVK_1.nii",
+            "tip_path": "12256313/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12202882": [
+        {
+            "kind": "trachealtube",
+            "path": "12202882/0000/trachealtube.nii"
+        }
+    ],
+    "12231404": [
+        {
+            "kind": "Magensonde",
+            "path": "12231404/0000/Magensonde.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12231404/0000/drainage_1.nii"
+        }
+    ],
+    "12258266": [
+        {
+            "kind": "ZVK",
+            "path": "12258266/0000/ZVK_1.nii",
+            "tip_path": "12258266/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12245249": [
+        {
+            "kind": "trachealtube",
+            "path": "12245249/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12245249/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12245249/0000/ZVK_1.nii",
+            "tip_path": "12245249/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6245968": [
+        {
+            "kind": "trachealtube",
+            "path": "6245968/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6245968/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6245968/0000/ZVK_1.nii",
+            "tip_path": "6245968/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6245968/0000/ZVK_2.nii",
+            "tip_path": "6245968/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12241368": [
+        {
+            "kind": "trachealtube",
+            "path": "12241368/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12241368/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12241368/0000/ZVK_1.nii",
+            "tip_path": "12241368/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6661514": [
+        {
+            "kind": "ZVK",
+            "path": "6661514/0000/ZVK_1.nii",
+            "tip_path": "6661514/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6661514/0000/ZVK_2.nii",
+            "tip_path": "6661514/0000/ZVK_2_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6661514/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6661514/0000/drainage_2.nii"
+        }
+    ],
+    "12234981": [
+        {
+            "kind": "trachealtube",
+            "path": "12234981/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12234981/0000/ZVK_1.nii",
+            "tip_path": "12234981/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12239169": [],
+    "12258899": [
+        {
+            "kind": "trachealtube",
+            "path": "12258899/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12258899/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12258899/0000/ZVK_1.nii",
+            "tip_path": "12258899/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12258899/0000/ZVK_2.nii",
+            "tip_path": "12258899/0000/ZVK_2_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12258899/0000/drainage_1.nii"
+        }
+    ],
+    "10759497": [
+        {
+            "kind": "Magensonde",
+            "path": "10759497/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "10759497/0000/ZVK_1.nii",
+            "tip_path": "10759497/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "10168092": [
+        {
+            "kind": "trachealtube",
+            "path": "10168092/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "10168092/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "10168092/0000/ZVK_1.nii",
+            "tip_path": "10168092/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12263333": [],
+    "8165004": [
+        {
+            "kind": "trachealtube",
+            "path": "8165004/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "8165004/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "8165004/0000/ZVK_1.nii",
+            "tip_path": "8165004/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12205895": [
+        {
+            "kind": "trachealtube",
+            "path": "12205895/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12205895/0000/ZVK_1.nii",
+            "tip_path": "12205895/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12205895/0000/drainage_1.nii"
+        }
+    ],
+    "6658762": [
+        {
+            "kind": "trachealtube",
+            "path": "6658762/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6658762/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6658762/0000/ZVK_1.nii",
+            "tip_path": "6658762/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6658762/0000/ZVK_2.nii",
+            "tip_path": "6658762/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12236660": [],
+    "12236499": [],
+    "12230520": [],
+    "12244544": [
+        {
+            "kind": "Magensonde",
+            "path": "12244544/0000/Magensonde.nii"
+        }
+    ],
+    "6667423": [
+        {
+            "kind": "trachealtube",
+            "path": "6667423/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6667423/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6667423/0000/ZVK_1.nii",
+            "tip_path": "6667423/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6667423/0000/ZVK_2.nii",
+            "tip_path": "6667423/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12248023": [
+        {
+            "kind": "trachealtube",
+            "path": "12248023/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12248023/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12248023/0000/ZVK_1.nii",
+            "tip_path": "12248023/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12248023/0000/drainage_1.nii"
+        }
+    ],
+    "7502355": [
+        {
+            "kind": "ZVK",
+            "path": "7502355/0000/ZVK_1.nii",
+            "tip_path": "7502355/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "7502355/0000/ZVK_2.nii",
+            "tip_path": "7502355/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12212294": [
+        {
+            "kind": "ZVK",
+            "path": "12212294/0000/ZVK_1.nii",
+            "tip_path": "12212294/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6654417": [],
+    "9735315": [
+        {
+            "kind": "ZVK",
+            "path": "9735315/0000/ZVK_1.nii",
+            "tip_path": "9735315/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "5180419": [
+        {
+            "kind": "trachealtube",
+            "path": "5180419/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "5180419/0000/Magensonde.nii"
+        }
+    ],
+    "12228039": [
+        {
+            "kind": "trachealtube",
+            "path": "12228039/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12228039/0000/ZVK_1.nii",
+            "tip_path": "12228039/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12230079": [
+        {
+            "kind": "drainage",
+            "path": "12230079/0000/drainage_1.nii"
+        }
+    ],
+    "12210130": [
+        {
+            "kind": "Magensonde",
+            "path": "12210130/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12210130/0000/ZVK_1.nii",
+            "tip_path": "12210130/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6662767": [
+        {
+            "kind": "ZVK",
+            "path": "6662767/0000/ZVK_1.nii",
+            "tip_path": "6662767/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12201131": [],
+    "12263244": [
+        {
+            "kind": "ZVK",
+            "path": "12263244/0000/ZVK_1.nii",
+            "tip_path": "12263244/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12248058": [],
+    "12203958": [
+        {
+            "kind": "trachealtube",
+            "path": "12203958/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12203958/0000/ZVK_1.nii",
+            "tip_path": "12203958/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12203958/0000/drainage_1.nii"
+        }
+    ],
+    "10030579": [
+        {
+            "kind": "trachealtube",
+            "path": "10030579/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "10030579/0000/ZVK_1.nii",
+            "tip_path": "10030579/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6681292": [],
+    "12234148": [
+        {
+            "kind": "ZVK",
+            "path": "12234148/0000/ZVK_1.nii",
+            "tip_path": "12234148/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6676978": [
+        {
+            "kind": "trachealtube",
+            "path": "6676978/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6676978/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6676978/0000/ZVK_1.nii",
+            "tip_path": "6676978/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6676978/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6676978/0000/drainage_2.nii"
+        }
+    ],
+    "12203271": [
+        {
+            "kind": "trachealtube",
+            "path": "12203271/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12203271/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12203271/0000/ZVK_1.nii",
+            "tip_path": "12203271/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12203271/0000/ZVK_2.nii",
+            "tip_path": "12203271/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "6677333": [],
+    "6687426": [],
+    "6685246": [],
+    "6675517": [
+        {
+            "kind": "trachealtube",
+            "path": "6675517/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6675517/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6675517/0000/ZVK_1.nii",
+            "tip_path": "6675517/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6675517/0000/ZVK_2.nii",
+            "tip_path": "6675517/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12214421": [
+        {
+            "kind": "trachealtube",
+            "path": "12214421/0000/trachealtube.nii"
+        }
+    ],
+    "7562634": [
+        {
+            "kind": "drainage",
+            "path": "7562634/0000/drainage_1.nii"
+        }
+    ],
+    "5184100": [
+        {
+            "kind": "trachealtube",
+            "path": "5184100/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "5184100/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "5184100/0000/ZVK_1.nii",
+            "tip_path": "5184100/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6677348": [],
+    "12202130": [],
+    "6688650": [
+        {
+            "kind": "trachealtube",
+            "path": "6688650/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6688650/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6688650/0000/ZVK_1.nii",
+            "tip_path": "6688650/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6688650/0000/ZVK_2.nii",
+            "tip_path": "6688650/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12272379": [
+        {
+            "kind": "trachealtube",
+            "path": "12272379/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12272379/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12272379/0000/ZVK_1.nii",
+            "tip_path": "12272379/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12272379/0000/drainage_1.nii"
+        }
+    ],
+    "12257357": [
+        {
+            "kind": "ZVK",
+            "path": "12257357/0000/ZVK_1.nii",
+            "tip_path": "12257357/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6679595": [
+        {
+            "kind": "ZVK",
+            "path": "6679595/0000/ZVK_1.nii",
+            "tip_path": "6679595/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12205806": [],
+    "6672118": [
+        {
+            "kind": "trachealtube",
+            "path": "6672118/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6672118/0000/Magensonde.nii"
+        }
+    ],
+    "12275068": [],
+    "6659160": [
+        {
+            "kind": "trachealtube",
+            "path": "6659160/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6659160/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6659160/0000/ZVK_1.nii",
+            "tip_path": "6659160/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12225298": [],
+    "12212019": [
+        {
+            "kind": "ZVK",
+            "path": "12212019/0000/ZVK_1.nii",
+            "tip_path": "12212019/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6662701": [
+        {
+            "kind": "trachealtube",
+            "path": "6662701/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6662701/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6662701/0000/ZVK_1.nii",
+            "tip_path": "6662701/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6662701/0000/ZVK_2.nii",
+            "tip_path": "6662701/0000/ZVK_2_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6662701/0000/drainage_1.nii"
+        }
+    ],
+    "8155024": [
+        {
+            "kind": "trachealtube",
+            "path": "8155024/0000/trachealtube.nii"
+        }
+    ],
+    "12275660": [],
+    "6646672": [
+        {
+            "kind": "Magensonde",
+            "path": "6646672/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6646672/0000/ZVK_1.nii",
+            "tip_path": "6646672/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12223022": [
+        {
+            "kind": "ZVK",
+            "path": "12223022/0000/ZVK_1.nii",
+            "tip_path": "12223022/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12223022/0000/ZVK_2.nii",
+            "tip_path": "12223022/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "6675736": [
+        {
+            "kind": "trachealtube",
+            "path": "6675736/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6675736/0000/ZVK_1.nii",
+            "tip_path": "6675736/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6658931": [
+        {
+            "kind": "ZVK",
+            "path": "6658931/0000/ZVK_1.nii",
+            "tip_path": "6658931/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6662423": [
+        {
+            "kind": "ZVK",
+            "path": "6662423/0000/ZVK_1.nii",
+            "tip_path": "6662423/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12232440": [
+        {
+            "kind": "trachealtube",
+            "path": "12232440/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12232440/0000/Magensonde.nii"
+        }
+    ],
+    "6675799": [
+        {
+            "kind": "ZVK",
+            "path": "6675799/0000/ZVK_1.nii",
+            "tip_path": "6675799/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6675799/0000/drainage_1.nii"
+        }
+    ],
+    "6661633": [
+        {
+            "kind": "trachealtube",
+            "path": "6661633/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6661633/0000/ZVK_1.nii",
+            "tip_path": "6661633/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6661633/0000/ZVK_2.nii",
+            "tip_path": "6661633/0000/ZVK_2_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6661633/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6661633/0000/drainage_2.nii"
+        }
+    ],
+    "12267348": [
+        {
+            "kind": "trachealtube",
+            "path": "12267348/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12267348/0000/ZVK_1.nii",
+            "tip_path": "12267348/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12267348/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12267348/0000/drainage_2.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12267348/0000/drainage_3.nii"
+        }
+    ],
+    "12210138": [
+        {
+            "kind": "Magensonde",
+            "path": "12210138/0000/Magensonde.nii"
+        }
+    ],
+    "12247216": [],
+    "6664019": [
+        {
+            "kind": "ZVK",
+            "path": "6664019/0000/ZVK_1.nii",
+            "tip_path": "6664019/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "5178360": [
+        {
+            "kind": "trachealtube",
+            "path": "5178360/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "5178360/0000/ZVK_1.nii",
+            "tip_path": "5178360/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "5178360/0000/ZVK_2.nii",
+            "tip_path": "5178360/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "7192359": [
+        {
+            "kind": "trachealtube",
+            "path": "7192359/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "7192359/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "7192359/0000/ZVK_1.nii",
+            "tip_path": "7192359/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6954805": [
+        {
+            "kind": "trachealtube",
+            "path": "6954805/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6954805/0000/ZVK_1.nii",
+            "tip_path": "6954805/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6954805/0000/drainage_1.nii"
+        }
+    ],
+    "6687713": [
+        {
+            "kind": "trachealtube",
+            "path": "6687713/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6687713/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6687713/0000/ZVK_1.nii",
+            "tip_path": "6687713/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6687713/0000/ZVK_2.nii",
+            "tip_path": "6687713/0000/ZVK_2_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6687713/0000/drainage_1.nii"
+        }
+    ],
+    "6669304": [],
+    "12234976": [
+        {
+            "kind": "trachealtube",
+            "path": "12234976/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12234976/0000/ZVK_1.nii",
+            "tip_path": "12234976/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12226432": [
+        {
+            "kind": "Magensonde",
+            "path": "12226432/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12226432/0000/ZVK_1.nii",
+            "tip_path": "12226432/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12227520": [
+        {
+            "kind": "trachealtube",
+            "path": "12227520/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12227520/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12227520/0000/ZVK_1.nii",
+            "tip_path": "12227520/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12247005": [
+        {
+            "kind": "ZVK",
+            "path": "12247005/0000/ZVK_1.nii",
+            "tip_path": "12247005/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6670362": [
+        {
+            "kind": "ZVK",
+            "path": "6670362/0000/ZVK_1.nii",
+            "tip_path": "6670362/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12269427": [
+        {
+            "kind": "trachealtube",
+            "path": "12269427/0000/trachealtube.nii"
+        }
+    ],
+    "12206009": [
+        {
+            "kind": "trachealtube",
+            "path": "12206009/0000/trachealtube.nii"
+        }
+    ],
+    "6680141": [
+        {
+            "kind": "ZVK",
+            "path": "6680141/0000/ZVK_1.nii",
+            "tip_path": "6680141/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12214140": [
+        {
+            "kind": "trachealtube",
+            "path": "12214140/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12214140/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12214140/0000/ZVK_1.nii",
+            "tip_path": "12214140/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12214140/0000/drainage_1.nii"
+        }
+    ],
+    "12217100": [
+        {
+            "kind": "trachealtube",
+            "path": "12217100/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12217100/0000/Magensonde.nii"
+        }
+    ],
+    "12247290": [
+        {
+            "kind": "ZVK",
+            "path": "12247290/0000/ZVK_1.nii",
+            "tip_path": "12247290/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6676786": [],
+    "12270333": [
+        {
+            "kind": "ZVK",
+            "path": "12270333/0000/ZVK_1.nii",
+            "tip_path": "12270333/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12230207": [
+        {
+            "kind": "ZVK",
+            "path": "12230207/0000/ZVK_1.nii",
+            "tip_path": "12230207/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12230207/0000/ZVK_2.nii",
+            "tip_path": "12230207/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "7490205": [],
+    "6662671": [
+        {
+            "kind": "ZVK",
+            "path": "6662671/0000/ZVK_1.nii",
+            "tip_path": "6662671/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6662671/0000/ZVK_2.nii",
+            "tip_path": "6662671/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "7709163": [
+        {
+            "kind": "ZVK",
+            "path": "7709163/0000/ZVK_1.nii",
+            "tip_path": "7709163/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6646137": [
+        {
+            "kind": "trachealtube",
+            "path": "6646137/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6646137/0000/ZVK_1.nii",
+            "tip_path": "6646137/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6646137/0000/ZVK_2.nii",
+            "tip_path": "6646137/0000/ZVK_2_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6646137/0000/ZVK_3.nii",
+            "tip_path": "6646137/0000/ZVK_3_tip.nii"
+        }
+    ],
+    "12212124": [],
+    "7655597": [],
+    "6646667": [
+        {
+            "kind": "trachealtube",
+            "path": "6646667/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6646667/0000/ZVK_1.nii",
+            "tip_path": "6646667/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6646667/0000/ZVK_2.nii",
+            "tip_path": "6646667/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12214084": [
+        {
+            "kind": "ZVK",
+            "path": "12214084/0000/ZVK_1.nii",
+            "tip_path": "12214084/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12211986": [
+        {
+            "kind": "Magensonde",
+            "path": "12211986/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12211986/0000/ZVK_1.nii",
+            "tip_path": "12211986/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12252055": [
+        {
+            "kind": "Magensonde",
+            "path": "12252055/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12252055/0000/ZVK_1.nii",
+            "tip_path": "12252055/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12252055/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12252055/0000/drainage_2.nii"
+        }
+    ],
+    "5181777": [
+        {
+            "kind": "drainage",
+            "path": "5181777/0000/drainage_1.nii"
+        }
+    ],
+    "6690738": [
+        {
+            "kind": "Magensonde",
+            "path": "6690738/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6690738/0000/ZVK_1.nii",
+            "tip_path": "6690738/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6690738/0000/ZVK_2.nii",
+            "tip_path": "6690738/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "7963076": [
+        {
+            "kind": "trachealtube",
+            "path": "7963076/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "7963076/0000/ZVK_1.nii",
+            "tip_path": "7963076/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12225472": [
+        {
+            "kind": "ZVK",
+            "path": "12225472/0000/ZVK_1.nii",
+            "tip_path": "12225472/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12213687": [
+        {
+            "kind": "trachealtube",
+            "path": "12213687/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12213687/0000/ZVK_1.nii",
+            "tip_path": "12213687/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12213687/0000/drainage_1.nii"
+        }
+    ],
+    "6675309": [],
+    "12221128": [
+        {
+            "kind": "trachealtube",
+            "path": "12221128/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12221128/0000/Magensonde.nii"
+        }
+    ],
+    "6673509": [
+        {
+            "kind": "trachealtube",
+            "path": "6673509/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6673509/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6673509/0000/ZVK_1.nii",
+            "tip_path": "6673509/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6673509/0000/drainage_1.nii"
+        }
+    ],
+    "10107873": [
+        {
+            "kind": "drainage",
+            "path": "10107873/0000/drainage_1.nii"
+        }
+    ],
+    "12272246": [],
+    "12247895": [],
+    "11063543": [],
+    "12236972": [],
+    "12272437": [
+        {
+            "kind": "trachealtube",
+            "path": "12272437/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12272437/0000/ZVK_1.nii",
+            "tip_path": "12272437/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12244806": [
+        {
+            "kind": "trachealtube",
+            "path": "12244806/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12244806/0000/ZVK_1.nii",
+            "tip_path": "12244806/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12270160": [
+        {
+            "kind": "ZVK",
+            "path": "12270160/0000/ZVK_1.nii",
+            "tip_path": "12270160/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12270160/0000/drainage_1.nii"
+        }
+    ],
+    "6662487": [],
+    "12230094": [
+        {
+            "kind": "trachealtube",
+            "path": "12230094/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12230094/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12230094/0000/ZVK_1.nii",
+            "tip_path": "12230094/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6687833": [
+        {
+            "kind": "trachealtube",
+            "path": "6687833/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6687833/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6687833/0000/ZVK_1.nii",
+            "tip_path": "6687833/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6687833/0000/ZVK_2.nii",
+            "tip_path": "6687833/0000/ZVK_2_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6687833/0000/drainage_1.nii"
+        }
+    ],
+    "12239285": [
+        {
+            "kind": "trachealtube",
+            "path": "12239285/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12239285/0000/Magensonde.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12239285/0000/drainage_1.nii"
+        }
+    ],
+    "12236416": [
+        {
+            "kind": "ZVK",
+            "path": "12236416/0000/ZVK_1.nii",
+            "tip_path": "12236416/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6682018": [],
+    "12269571": [
+        {
+            "kind": "trachealtube",
+            "path": "12269571/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12269571/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12269571/0000/ZVK_1.nii",
+            "tip_path": "12269571/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6670510": [],
+    "6647977": [
+        {
+            "kind": "ZVK",
+            "path": "6647977/0000/ZVK_1.nii",
+            "tip_path": "6647977/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6663770": [],
+    "12264784": [
+        {
+            "kind": "ZVK",
+            "path": "12264784/0000/ZVK_1.nii",
+            "tip_path": "12264784/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6662716": [
+        {
+            "kind": "trachealtube",
+            "path": "6662716/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6662716/0000/ZVK_1.nii",
+            "tip_path": "6662716/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6662716/0000/drainage_1.nii"
+        }
+    ],
+    "6683232": [
+        {
+            "kind": "trachealtube",
+            "path": "6683232/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6683232/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6683232/0000/ZVK_1.nii",
+            "tip_path": "6683232/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6683232/0000/drainage_1.nii"
+        }
+    ],
+    "12202578": [
+        {
+            "kind": "trachealtube",
+            "path": "12202578/0000/trachealtube.nii"
+        }
+    ],
+    "5179635": [
+        {
+            "kind": "trachealtube",
+            "path": "5179635/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "5179635/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "5179635/0000/ZVK_1.nii",
+            "tip_path": "5179635/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "5179635/0000/drainage_1.nii"
+        }
+    ],
+    "12221269": [
+        {
+            "kind": "trachealtube",
+            "path": "12221269/0000/trachealtube.nii"
+        }
+    ],
+    "7212151": [],
+    "6660678": [],
+    "12238201": [
+        {
+            "kind": "drainage",
+            "path": "12238201/0000/drainage_1.nii"
+        }
+    ],
+    "6213798": [],
+    "6668064": [
+        {
+            "kind": "trachealtube",
+            "path": "6668064/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6668064/0000/Magensonde.nii"
+        }
+    ],
+    "12268641": [
+        {
+            "kind": "trachealtube",
+            "path": "12268641/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12268641/0000/Magensonde.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12268641/0000/drainage_1.nii"
+        }
+    ],
+    "6665853": [
+        {
+            "kind": "ZVK",
+            "path": "6665853/0000/ZVK_1.nii",
+            "tip_path": "6665853/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12258865": [
+        {
+            "kind": "trachealtube",
+            "path": "12258865/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12258865/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12258865/0000/ZVK_1.nii",
+            "tip_path": "12258865/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12269597": [
+        {
+            "kind": "trachealtube",
+            "path": "12269597/0000/trachealtube.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12269597/0000/drainage_1.nii"
+        }
+    ],
+    "12203260": [],
+    "12231869": [
+        {
+            "kind": "ZVK",
+            "path": "12231869/0000/ZVK_1.nii",
+            "tip_path": "12231869/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12231869/0000/ZVK_2.nii",
+            "tip_path": "12231869/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12228330": [
+        {
+            "kind": "trachealtube",
+            "path": "12228330/0000/trachealtube.nii"
+        }
+    ],
+    "12247431": [
+        {
+            "kind": "ZVK",
+            "path": "12247431/0000/ZVK_1.nii",
+            "tip_path": "12247431/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6678607": [
+        {
+            "kind": "ZVK",
+            "path": "6678607/0000/ZVK_1.nii",
+            "tip_path": "6678607/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "5184473": [
+        {
+            "kind": "ZVK",
+            "path": "5184473/0000/ZVK_1.nii",
+            "tip_path": "5184473/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "5184473/0000/ZVK_2.nii",
+            "tip_path": "5184473/0000/ZVK_2_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "5184473/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "5184473/0000/drainage_2.nii"
+        }
+    ],
+    "6648380": [
+        {
+            "kind": "trachealtube",
+            "path": "6648380/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6648380/0000/Magensonde.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6648380/0000/drainage_1.nii"
+        }
+    ],
+    "12272446": [
+        {
+            "kind": "trachealtube",
+            "path": "12272446/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12272446/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12272446/0000/ZVK_1.nii",
+            "tip_path": "12272446/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12275838": [
+        {
+            "kind": "ZVK",
+            "path": "12275838/0000/ZVK_1.nii",
+            "tip_path": "12275838/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6687793": [
+        {
+            "kind": "Magensonde",
+            "path": "6687793/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6687793/0000/ZVK_1.nii",
+            "tip_path": "6687793/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6687793/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6687793/0000/drainage_2.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6687793/0000/drainage_3.nii"
+        }
+    ],
+    "12251897": [],
+    "11268476": [
+        {
+            "kind": "ZVK",
+            "path": "11268476/0000/ZVK_1.nii",
+            "tip_path": "11268476/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12273396": [
+        {
+            "kind": "trachealtube",
+            "path": "12273396/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12273396/0000/ZVK_1.nii",
+            "tip_path": "12273396/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12273396/0000/ZVK_2.nii",
+            "tip_path": "12273396/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12236314": [
+        {
+            "kind": "ZVK",
+            "path": "12236314/0000/ZVK_1.nii",
+            "tip_path": "12236314/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12236314/0000/drainage_1.nii"
+        }
+    ],
+    "12256299": [
+        {
+            "kind": "trachealtube",
+            "path": "12256299/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12256299/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12256299/0000/ZVK_1.nii",
+            "tip_path": "12256299/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12256299/0000/ZVK_2.nii",
+            "tip_path": "12256299/0000/ZVK_2_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12256299/0000/drainage_1.nii"
+        }
+    ],
+    "6675831": [
+        {
+            "kind": "trachealtube",
+            "path": "6675831/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6675831/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6675831/0000/ZVK_1.nii",
+            "tip_path": "6675831/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6675831/0000/ZVK_2.nii",
+            "tip_path": "6675831/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "6671308": [
+        {
+            "kind": "ZVK",
+            "path": "6671308/0000/ZVK_1.nii",
+            "tip_path": "6671308/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "5181499": [
+        {
+            "kind": "trachealtube",
+            "path": "5181499/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "5181499/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "5181499/0000/ZVK_1.nii",
+            "tip_path": "5181499/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "5181499/0000/ZVK_2.nii",
+            "tip_path": "5181499/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "6664779": [
+        {
+            "kind": "trachealtube",
+            "path": "6664779/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6664779/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6664779/0000/ZVK_1.nii",
+            "tip_path": "6664779/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12259179": [
+        {
+            "kind": "trachealtube",
+            "path": "12259179/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12259179/0000/ZVK_1.nii",
+            "tip_path": "12259179/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12259179/0000/ZVK_2.nii",
+            "tip_path": "12259179/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "6668934": [],
+    "6662412": [
+        {
+            "kind": "trachealtube",
+            "path": "6662412/0000/trachealtube.nii"
+        }
+    ],
+    "12254804": [
+        {
+            "kind": "Magensonde",
+            "path": "12254804/0000/Magensonde.nii"
+        }
+    ],
+    "7765528": [
+        {
+            "kind": "trachealtube",
+            "path": "7765528/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "7765528/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "7765528/0000/ZVK_1.nii",
+            "tip_path": "7765528/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6693127": [
+        {
+            "kind": "trachealtube",
+            "path": "6693127/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6693127/0000/ZVK_1.nii",
+            "tip_path": "6693127/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6693127/0000/drainage_1.nii"
+        }
+    ],
+    "6675641": [],
+    "12214697": [
+        {
+            "kind": "trachealtube",
+            "path": "12214697/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12214697/0000/ZVK_1.nii",
+            "tip_path": "12214697/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12214697/0000/drainage_1.nii"
+        }
+    ],
+    "6655960": [
+        {
+            "kind": "ZVK",
+            "path": "6655960/0000/ZVK_1.nii",
+            "tip_path": "6655960/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12202775": [],
+    "6670946": [
+        {
+            "kind": "trachealtube",
+            "path": "6670946/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6670946/0000/ZVK_1.nii",
+            "tip_path": "6670946/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6670946/0000/ZVK_2.nii",
+            "tip_path": "6670946/0000/ZVK_2_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6670946/0000/drainage_1.nii"
+        }
+    ],
+    "12261019": [
+        {
+            "kind": "ZVK",
+            "path": "12261019/0000/ZVK_1.nii",
+            "tip_path": "12261019/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12202758": [
+        {
+            "kind": "trachealtube",
+            "path": "12202758/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12202758/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12202758/0000/ZVK_1.nii",
+            "tip_path": "12202758/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6671283": [
+        {
+            "kind": "trachealtube",
+            "path": "6671283/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6671283/0000/Magensonde.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6671283/0000/drainage_1.nii"
+        }
+    ],
+    "6655828": [
+        {
+            "kind": "ZVK",
+            "path": "6655828/0000/ZVK_1.nii",
+            "tip_path": "6655828/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6655828/0000/drainage_1.nii"
+        }
+    ],
+    "12254187": [
+        {
+            "kind": "trachealtube",
+            "path": "12254187/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12254187/0000/Magensonde.nii"
+        }
+    ],
+    "6968660": [
+        {
+            "kind": "trachealtube",
+            "path": "6968660/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6968660/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6968660/0000/ZVK_1.nii",
+            "tip_path": "6968660/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6968660/0000/ZVK_2.nii",
+            "tip_path": "6968660/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "12217156": [],
+    "9133401": [
+        {
+            "kind": "trachealtube",
+            "path": "9133401/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "9133401/0000/ZVK_1.nii",
+            "tip_path": "9133401/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "9133401/0000/drainage_1.nii"
+        }
+    ],
+    "12214751": [
+        {
+            "kind": "trachealtube",
+            "path": "12214751/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12214751/0000/Magensonde.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12214751/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12214751/0000/drainage_2.nii"
+        }
+    ],
+    "6686252": [
+        {
+            "kind": "trachealtube",
+            "path": "6686252/0000/trachealtube.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6686252/0000/drainage_1.nii"
+        }
+    ],
+    "12217099": [],
+    "12228103": [
+        {
+            "kind": "trachealtube",
+            "path": "12228103/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12228103/0000/ZVK_1.nii",
+            "tip_path": "12228103/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6690042": [
+        {
+            "kind": "ZVK",
+            "path": "6690042/0000/ZVK_1.nii",
+            "tip_path": "6690042/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12230049": [
+        {
+            "kind": "Magensonde",
+            "path": "12230049/0000/Magensonde.nii"
+        }
+    ],
+    "12250232": [
+        {
+            "kind": "trachealtube",
+            "path": "12250232/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12250232/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12250232/0000/ZVK_1.nii",
+            "tip_path": "12250232/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12250232/0000/ZVK_2.nii",
+            "tip_path": "12250232/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "6665775": [],
+    "6650346": [
+        {
+            "kind": "ZVK",
+            "path": "6650346/0000/ZVK_1.nii",
+            "tip_path": "6650346/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6650346/0000/ZVK_2.nii",
+            "tip_path": "6650346/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "6554825": [
+        {
+            "kind": "trachealtube",
+            "path": "6554825/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6554825/0000/ZVK_1.nii",
+            "tip_path": "6554825/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12259076": [
+        {
+            "kind": "ZVK",
+            "path": "12259076/0000/ZVK_1.nii",
+            "tip_path": "12259076/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12195463": [
+        {
+            "kind": "trachealtube",
+            "path": "12195463/0000/trachealtube.nii"
+        }
+    ],
+    "12274316": [
+        {
+            "kind": "trachealtube",
+            "path": "12274316/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12274316/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12274316/0000/ZVK_1.nii",
+            "tip_path": "12274316/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12212183": [
+        {
+            "kind": "ZVK",
+            "path": "12212183/0000/ZVK_1.nii",
+            "tip_path": "12212183/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12269402": [
+        {
+            "kind": "ZVK",
+            "path": "12269402/0000/ZVK_1.nii",
+            "tip_path": "12269402/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12269402/0000/drainage_1.nii"
+        }
+    ],
+    "12263372": [
+        {
+            "kind": "trachealtube",
+            "path": "12263372/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12263372/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12263372/0000/ZVK_1.nii",
+            "tip_path": "12263372/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12197625": [
+        {
+            "kind": "trachealtube",
+            "path": "12197625/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12197625/0000/ZVK_1.nii",
+            "tip_path": "12197625/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6662225": [
+        {
+            "kind": "trachealtube",
+            "path": "6662225/0000/trachealtube.nii"
+        }
+    ],
+    "7169490": [
+        {
+            "kind": "ZVK",
+            "path": "7169490/0000/ZVK_1.nii",
+            "tip_path": "7169490/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12214931": [
+        {
+            "kind": "trachealtube",
+            "path": "12214931/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12214931/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12214931/0000/ZVK_1.nii",
+            "tip_path": "12214931/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12214931/0000/ZVK_2.nii",
+            "tip_path": "12214931/0000/ZVK_2_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12214931/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12214931/0000/drainage_2.nii"
+        }
+    ],
+    "12221074": [
+        {
+            "kind": "ZVK",
+            "path": "12221074/0000/ZVK_1.nii",
+            "tip_path": "12221074/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "11921028": [
+        {
+            "kind": "trachealtube",
+            "path": "11921028/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "11921028/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "11921028/0000/ZVK_1.nii",
+            "tip_path": "11921028/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "11921028/0000/drainage_1.nii"
+        }
+    ],
+    "5184126": [],
+    "12254231": [
+        {
+            "kind": "Magensonde",
+            "path": "12254231/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12254231/0000/ZVK_1.nii",
+            "tip_path": "12254231/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12254231/0000/ZVK_2.nii",
+            "tip_path": "12254231/0000/ZVK_2_tip.nii"
+        }
+    ],
+    "6687839": [
+        {
+            "kind": "trachealtube",
+            "path": "6687839/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6687839/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6687839/0000/ZVK_1.nii",
+            "tip_path": "6687839/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6687839/0000/ZVK_2.nii",
+            "tip_path": "6687839/0000/ZVK_2_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6687839/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6687839/0000/drainage_2.nii"
+        }
+    ],
+    "6657444": [
+        {
+            "kind": "trachealtube",
+            "path": "6657444/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6657444/0000/ZVK_1.nii",
+            "tip_path": "6657444/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6657444/0000/ZVK_2.nii",
+            "tip_path": "6657444/0000/ZVK_2_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6657444/0000/drainage_1.nii"
+        }
+    ],
+    "6687553": [
+        {
+            "kind": "trachealtube",
+            "path": "6687553/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6687553/0000/Magensonde.nii"
+        }
+    ],
+    "12212091": [
+        {
+            "kind": "trachealtube",
+            "path": "12212091/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12212091/0000/ZVK_1.nii",
+            "tip_path": "12212091/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6679591": [
+        {
+            "kind": "trachealtube",
+            "path": "6679591/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6679591/0000/ZVK_1.nii",
+            "tip_path": "6679591/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12216628": [
+        {
+            "kind": "trachealtube",
+            "path": "12216628/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12216628/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12216628/0000/ZVK_1.nii",
+            "tip_path": "12216628/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12216628/0000/drainage_1.nii"
+        }
+    ],
+    "8470388": [],
+    "6687342": [
+        {
+            "kind": "ZVK",
+            "path": "6687342/0000/ZVK_1.nii",
+            "tip_path": "6687342/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12263335": [
+        {
+            "kind": "ZVK",
+            "path": "12263335/0000/ZVK_1.nii",
+            "tip_path": "12263335/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "9729798": [],
+    "6687659": [
+        {
+            "kind": "ZVK",
+            "path": "6687659/0000/ZVK_1.nii",
+            "tip_path": "6687659/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6667368": [
+        {
+            "kind": "ZVK",
+            "path": "6667368/0000/ZVK_1.nii",
+            "tip_path": "6667368/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6667368/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "6667368/0000/drainage_2.nii"
+        }
+    ],
+    "6651315": [
+        {
+            "kind": "trachealtube",
+            "path": "6651315/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6651315/0000/ZVK_1.nii",
+            "tip_path": "6651315/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6652108": [],
+    "6689234": [
+        {
+            "kind": "trachealtube",
+            "path": "6689234/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6689234/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6689234/0000/ZVK_1.nii",
+            "tip_path": "6689234/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "9703265": [
+        {
+            "kind": "trachealtube",
+            "path": "9703265/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "9703265/0000/ZVK_1.nii",
+            "tip_path": "9703265/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "9703265/0000/drainage_1.nii"
+        }
+    ],
+    "12212122": [
+        {
+            "kind": "ZVK",
+            "path": "12212122/0000/ZVK_1.nii",
+            "tip_path": "12212122/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "6670372": [],
+    "7573045": [
+        {
+            "kind": "ZVK",
+            "path": "7573045/0000/ZVK_1.nii",
+            "tip_path": "7573045/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "12196083": [
+        {
+            "kind": "trachealtube",
+            "path": "12196083/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "12196083/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12196083/0000/ZVK_1.nii",
+            "tip_path": "12196083/0000/ZVK_1_tip.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12196083/0000/drainage_1.nii"
+        },
+        {
+            "kind": "drainage",
+            "path": "12196083/0000/drainage_2.nii"
+        }
+    ],
+    "8948140": [],
+    "12208997": [
+        {
+            "kind": "trachealtube",
+            "path": "12208997/0000/trachealtube.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "12208997/0000/ZVK_1.nii",
+            "tip_path": "12208997/0000/ZVK_1_tip.nii"
+        }
+    ],
+    "5186200": [],
+    "12256342": [
+        {
+            "kind": "drainage",
+            "path": "12256342/0000/drainage_1.nii"
+        }
+    ],
+    "6654730": [
+        {
+            "kind": "trachealtube",
+            "path": "6654730/0000/trachealtube.nii"
+        },
+        {
+            "kind": "Magensonde",
+            "path": "6654730/0000/Magensonde.nii"
+        },
+        {
+            "kind": "ZVK",
+            "path": "6654730/0000/ZVK_1.nii",
+            "tip_path": "6654730/0000/ZVK_1_tip.nii"
+        }
+    ]
+}

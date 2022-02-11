@@ -19,6 +19,8 @@ import time
 import traceback
 from collections import OrderedDict
 from urllib.parse import quote_plus
+from pathlib import Path
+from typing import List, Dict
 
 import ctk
 import qt
@@ -1110,6 +1112,38 @@ class MONAILabelWidget(ScriptedLoadableModuleWidget, VTKObservationMixin):
         segmentEditorWidget = slicer.modules.segmenteditor.widgetRepresentation().self().editor
         segmentEditorWidget.setSegmentationNode(self._segmentNode)
         segmentEditorWidget.setMasterVolumeNode(self._volumeNode)
+
+        list_dirpath = Path(__file__).parent / 'list_of_fms.json'
+        with open(list_dirpath) as f:
+            accessions: Dict[str, List[Dict[str, str]]] = json.load(f)
+        # Example:
+        # {
+        #     "6654730": [
+        #     {
+        #         "kind": "trachealtube",
+        #         "path": "6654730/0000/trachealtube.nii"
+        #     },
+        #     {
+        #         "kind": "Magensonde",
+        #         "path": "6654730/0000/Magensonde.nii"
+        #     },
+        #     {
+        #         "kind": "ZVK",
+        #         "path": "6654730/0000/ZVK_1.nii",
+        #         "tip_path": "6654730/0000/ZVK_1_tip.nii"
+        #     }
+        #     ],
+        #     ...
+        # ]
+        accession_number: str = sample["id"]
+
+        list_of_fms: List[Dict[str, str]] = accessions[accession_number]
+
+        mypaths = []
+        for fm in list_of_fms:
+            mypaths.append(fm['path'])
+            if "tip_path" in fm:
+                mypaths.append(fm["tip_path"])
 
         if self.info.get("labels"):
             self.updateSegmentationMask(None, self.info.get("labels"))
