@@ -1,4 +1,4 @@
-# Copyright 2020 - 2021 MONAI Consortium
+# Copyright (c) MONAI Consortium
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -8,7 +8,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-
+import copy
 import logging
 import os
 import time
@@ -126,7 +126,7 @@ class TTAScoring(ScoringMethod):
         logger.info(f"Using {model_file} for running TTA")
         model_ts = int(os.stat(model_file).st_mtime) if model_file and os.path.exists(model_file) else 1
         if network:
-            model = network
+            model = copy.deepcopy(network)
             if model_file:
                 checkpoint = torch.load(model_file)
                 model_state_dict = checkpoint.get("model", checkpoint)
@@ -227,9 +227,9 @@ class TestTimeAugmentation:
             For example, to handle key `image`,  read/write affine matrices from the
             metadata `image_meta_dict` dictionary's `affine` field.
             this arg only works when `meta_keys=None`.
-        return_full_data: normally, metrics are returned (mode, mean, std, vvc). Setting this flag to `True` will return the
-            full data. Dimensions will be same size as when passing a single image through `inferrer_fn`, with a dimension appended
-            equal in size to `num_examples` (N), i.e., `[N,C,H,W,[D]]`.
+        return_full_data: normally, metrics are returned (mode, mean, std, vvc). Setting this flag to `True` will
+            return the full data. Dimensions will be same size as when passing a single image through `inferrer_fn`,
+            with a dimension appended equal in size to `num_examples` (N), i.e., `[N,C,H,W,[D]]`.
         progress: whether to display a progress bar.
 
     Example:
@@ -299,11 +299,12 @@ class TestTimeAugmentation:
             num_examples: number of realisations to be processed and results combined.
 
         Returns:
-            - if `return_full_data==False`: mode, mean, std, vvc. The mode, mean and standard deviation are calculated across
-                `num_examples` outputs at each voxel. The volume variation coefficient (VVC) is `std/mean` across the whole output,
-                including `num_examples`. See original paper for clarification.
-            - if `return_full_data==False`: data is returned as-is after applying the `inferrer_fn` and then concatenating across
-                the first dimension containing `num_examples`. This allows the user to perform their own analysis if desired.
+            - if `return_full_data==False`: mode, mean, std, vvc. The mode, mean and standard deviation are calculated
+                across `num_examples` outputs at each voxel. The volume variation coefficient (VVC) is `std/mean`
+                across the whole output, including `num_examples`. See original paper for clarification.
+            - if `return_full_data==False`: data is returned as-is after applying the `inferrer_fn` and then
+                concatenating across the first dimension containing `num_examples`. This allows the user to perform
+                their own analysis if desired.
         """
         d = dict(data)
 

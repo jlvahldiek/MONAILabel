@@ -1,4 +1,4 @@
-# Copyright 2020 - 2021 MONAI Consortium
+# Copyright (c) MONAI Consortium
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -18,7 +18,7 @@ TEST_DATA = os.path.join(os.path.realpath(os.path.dirname(__file__)), "data")
 
 def run_main():
     dataset_file = os.path.join(TEST_DATA, "dataset.zip")
-    dataset_url = "https://github.com/Project-MONAI/MONAILabel/releases/download/data/test_dataset_v2.zip"
+    dataset_url = "https://github.com/Project-MONAI/MONAILabel/releases/download/data/test_dataset.zip"
     if not os.path.exists(os.path.join(TEST_DATA, "dataset")):
         if not os.path.exists(dataset_file):
             download_url(url=dataset_url, filepath=dataset_file)

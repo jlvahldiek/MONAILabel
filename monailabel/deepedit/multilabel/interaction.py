@@ -1,4 +1,4 @@
-# Copyright 2020 - 2021 MONAI Consortium
+# Copyright (c) MONAI Consortium
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -17,9 +17,11 @@ from monai.data import decollate_batch, list_data_collate
 from monai.engines import SupervisedEvaluator, SupervisedTrainer
 from monai.engines.utils import IterationEvents
 from monai.transforms import Compose
+from monai.utils import deprecated
 from monai.utils.enums import CommonKeys
 
 
+@deprecated(since="0.4", msg_suffix="For Radiology app use monai.apps.deepedit.interaction.Interaction instead")
 class Interaction:
     """
     Ignite process_function used to introduce interactions (simulation of clicks) for DeepEdit Training/Evaluation.
@@ -46,7 +48,7 @@ class Interaction:
             transforms = Compose(transforms)
 
         self.deepgrow_probability = deepgrow_probability
-        self.transforms = transforms
+        self.transforms = Compose(transforms) if not isinstance(transforms, Compose) else transforms
         self.train = train
         self.label_names = label_names
         self.click_probability_key = click_probability_key

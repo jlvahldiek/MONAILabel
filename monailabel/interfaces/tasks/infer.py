@@ -1,4 +1,4 @@
-# Copyright 2020 - 2021 MONAI Consortium
+# Copyright (c) MONAI Consortium
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -17,11 +17,12 @@ from abc import abstractmethod
 from typing import Any, Callable, Dict, Sequence, Tuple, Union
 
 import torch
-from monai.inferers import SimpleInferer, SlidingWindowInferer
+from monai.inferers import Inferer, SimpleInferer, SlidingWindowInferer
 
 from monailabel.interfaces.exception import MONAILabelError, MONAILabelException
-from monailabel.interfaces.utils.transform import run_transforms
+from monailabel.interfaces.utils.transform import dump_data, run_transforms
 from monailabel.transform.writer import Writer
+from monailabel.utils.others.generic import device_list
 
 logger = logging.getLogger(__name__)
 
@@ -57,7 +58,7 @@ class InferTask:
 
     def __init__(
         self,
-        path: Union[str, Sequence[str]],
+        path: Union[None, str, Sequence[str]],
         network: Union[None, Any],
         type: Union[str, InferType],
         labels: Union[str, None, Sequence[str], Dict[Any, Any]],
@@ -70,6 +71,7 @@ class InferTask:
         config: Union[None, Dict[str, Any]] = None,
         load_strict: bool = False,
         roi_size=None,
+        preload=False,
     ):
         """
         :param path: Model File Path. Supports multiple paths to support versions (Last item will be picked as latest)
@@ -84,8 +86,9 @@ class InferTask:
         :param config: K,V pairs to be part of user config
         :param load_strict: Load model in strict mode
         :param roi_size: ROI size for scanning window inference
+        :param preload: Preload model/network on all available GPU devices
         """
-        self.path = path
+        self.path = [] if not path else [path] if isinstance(path, str) else path
         self.network = network
         self.type = type
         self.labels = [] if labels is None else [labels] if isinstance(labels, str) else labels
@@ -99,8 +102,9 @@ class InferTask:
         self.roi_size = roi_size
 
         self._networks: Dict = {}
+
         self._config: Dict[str, Any] = {
-            # "device": "cuda",
+            # "device": device_list(),
             # "result_extension": None,
             # "result_dtype": None,
             # "result_compress": False
@@ -110,6 +114,11 @@ class InferTask:
         }
         if config:
             self._config.update(config)
+
+        if preload:
+            for device in device_list():
+                logger.info(f"Preload Network for device: {device}")
+                self._get_network(device)
 
     def info(self) -> Dict[str, Any]:
         return {
@@ -127,9 +136,9 @@ class InferTask:
         if self.network or self.type == InferType.SCRIBBLES:
             return True
 
-        paths = [self.path] if isinstance(self.path, str) else self.path
+        paths = self.path
         for path in reversed(paths):
-            if os.path.exists(path):
+            if path and os.path.exists(path):
                 return True
         return False
 
@@ -137,9 +146,9 @@ class InferTask:
         if not self.path:
             return None
 
-        paths = [self.path] if isinstance(self.path, str) else self.path
+        paths = self.path
         for path in reversed(paths):
-            if os.path.exists(path):
+            if path and os.path.exists(path):
                 return path
         return None
 
@@ -207,7 +216,7 @@ class InferTask:
         """
         pass
 
-    def inferer(self, data=None) -> Callable:
+    def inferer(self, data=None) -> Inferer:
         input_shape = data[self.input_key].shape if data else None
 
         roi_size = data.get("roi_size", self.roi_size) if data else self.roi_size
@@ -247,14 +256,17 @@ class InferTask:
 
         # device
         device = req.get("device", "cuda")
+        if device.startswith("cuda") and not torch.cuda.is_available():
+            device = "cpu"
         req["device"] = device
-        logger.setLevel(req.get("logging", "INFO").upper())
-        logger.info(f"Infer Request (final): {req}")
 
-        if req.get("image") and isinstance(req.get("image"), str):
+        logger.setLevel(req.get("logging", "INFO").upper())
+        if req.get("image") is not None and isinstance(req.get("image"), str):
+            logger.info(f"Infer Request (final): {req}")
             data = copy.deepcopy(req)
             data.update({"image_path": req.get("image")})
         else:
+            dump_data(req, logger.level)
             data = req
 
         start = time.time()
@@ -299,11 +311,12 @@ class InferTask:
             "post": round(latency_post, 2),
             "write": round(latency_write, 2),
             "total": round(latency_total, 2),
+            "transform": data.get("latencies"),
         }
 
         if result_file_name:
-            logger.info("Result File: {}".format(result_file_name))
-            logger.info("Result Json Keys: {}".format(list(result_json.keys())))
+            logger.info(f"Result File: {result_file_name}")
+            logger.info(f"Result Json Keys: {list(result_json.keys())}")
         return result_file_name, result_json
 
     def run_pre_transforms(self, data, transforms):
@@ -336,7 +349,7 @@ class InferTask:
 
     def _get_network(self, device):
         path = self.get_path()
-        logger.info("Infer model path: {}".format(path))
+        logger.info(f"Infer model path: {path}")
         if not path and not self.network:
             if self.type == InferType.SCRIBBLES:
                 return None
@@ -345,9 +358,6 @@ class InferTask:
                 MONAILabelError.INFERENCE_ERROR,
                 f"Model Path ({self.path}) does not exist/valid",
             )
-
-        if device.startswith("cuda") and not torch.cuda.is_available():
-            device = "cpu"
 
         cached = self._networks.get(device)
         statbuf = os.stat(path) if path else None
@@ -360,16 +370,15 @@ class InferTask:
 
         if network is None:
             if self.network:
-                network = self.network
+                network = copy.deepcopy(self.network)
+                network.to(torch.device(device))
+
                 if path:
                     checkpoint = torch.load(path, map_location=torch.device(device))
                     model_state_dict = checkpoint.get(self.model_state_dict, checkpoint)
                     network.load_state_dict(model_state_dict, strict=self.load_strict)
             else:
-                network = torch.jit.load(path, map_location=torch.device(device))
-
-            if device.startswith("cuda"):
-                network = network.cuda(device)
+                network = torch.jit.load(path, map_location=torch.device(device)).to(torch.device)
 
             network.eval()
             self._networks[device] = (network, statbuf.st_mtime if statbuf else 0)
@@ -388,22 +397,18 @@ class InferTask:
         """
 
         inferer = self.inferer(data)
-        logger.info("Inferer:: {} => {}".format(inferer.__class__.__name__, inferer.__dict__))
-
-        device = device if device else "cuda"
-        if device.startswith("cuda") and not torch.cuda.is_available():
-            device = "cpu"
+        logger.info(f"Inferer:: {device} => {inferer.__class__.__name__} => {inferer.__dict__}")
 
         network = self._get_network(device)
         if network:
             inputs = data[self.input_key]
             inputs = inputs if torch.is_tensor(inputs) else torch.from_numpy(inputs)
             inputs = inputs[None] if convert_to_batch else inputs
-            if device.startswith("cuda"):
-                inputs = inputs.cuda(torch.device(device))
+            inputs = inputs.to(torch.device(device))
 
             with torch.no_grad():
                 outputs = inferer(inputs, network)
+
             if device.startswith("cuda"):
                 torch.cuda.empty_cache()
 
@@ -429,6 +434,8 @@ class InferTask:
             data["result_extension"] = extension
         if dtype is not None:
             data["result_dtype"] = dtype
+        if self.labels is not None:
+            data["labels"] = self.labels
 
         writer = Writer(label=self.output_label_key, json=self.output_json_key)
         return writer(data)

@@ -1,6 +1,8 @@
+torch>=1.7
 aiofiles==0.8.0
 fastapi==0.73.0
-monai[nibabel, skimage, pillow, tensorboard, gdown, ignite, torchvision, itk, tqdm, lmdb, psutil, openslide]>=0.8.1
+SimpleITK>=2.1
+monai[nibabel, skimage, pillow, tensorboard, gdown, ignite, torchvision, itk, tqdm, lmdb, psutil, openslide]>=0.9.*
 PyYAML==6.0
 python-multipart==0.0.5
 requests-toolbelt==0.9.1
@@ -9,7 +11,7 @@ watchdog==2.1.6
 pydantic==1.9.0
 python-dotenv==0.19.2
 filelock==3.4.2
-httpx==0.22.0
+httpx==0.23.0
 dicomweb-client==0.52.0
 pydicom==2.2.2
 pydicom-seg==0.4.0
@@ -17,11 +19,15 @@ pynetdicom==2.0.1
 expiringdict==1.2.1
 schedule==1.1.0
 timeloop==1.0.2
-SimpleCRF==0.2.1.1
 numpy>=1.21.5
-einops==0.3.2
+einops>=0.3.2
 openslide-python==1.1.2
-opencv-python==4.5.4.60
-Shapely==1.8.0
+opencv-python-headless==4.5.5.64
+Shapely==1.8.1.post1
+girder_client==3.1.8
+numpymaxflow==0.0.2
+pynrrd==0.4.2
+ninja==1.10.2.3
+protobuf==3.20.1
 
 #sudo apt-get install openslide-tools -y

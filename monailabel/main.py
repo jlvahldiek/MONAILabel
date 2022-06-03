@@ -1,4 +1,4 @@
-# Copyright 2020 - 2021 MONAI Consortium
+# Copyright (c) MONAI Consortium
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -58,7 +58,7 @@ class Main:
         parser.add_argument("--ssl_certfile", default=None, type=str, help="SSL certificate file")
         parser.add_argument("--ssl_keyfile_password", default=None, type=str, help="SSL key file password")
         parser.add_argument("--ssl_ca_certs", default=None, type=str, help="CA certificates file")
-        parser.add_argument("--workers", default=1, type=int, help="Number of worker processes")
+        parser.add_argument("--workers", default=None, type=int, help="Number of worker processes")
         parser.add_argument("--limit_concurrency", default=None, type=int, help="Max concurrent connections")
         parser.add_argument("--access_log", action="store_true", help="Enable access log")
 
@@ -136,7 +136,7 @@ class Main:
             print("Available Datasets are:")
             print("----------------------------------------------------")
             for k, v in resource.items():
-                print("  {:<30}: {}".format(k, v))
+                print(f"  {k:<30}: {v}")
             print("")
         else:
             url = resource.get(args.name) if args.name else None
@@ -175,9 +175,8 @@ class Main:
         apps.sort()
 
         resource = {
-            "Deepedit based Apps": [a for a in apps if a.startswith("deepedit")],
-            "Deepgrow based Apps": [a for a in apps if a.startswith("deepgrow")],
-            "Standard Segmentation Apps": [a for a in apps if a.startswith("segmentation")],
+            "Radiology based Apps": [a for a in apps if a.startswith("radiology")],
+            "Pathology based Apps": [a for a in apps if a.startswith("pathology")],
         }
 
         if not args.download:
@@ -208,7 +207,7 @@ class Main:
     def action_plugins(self, args):
         plugins_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.realpath(__file__))), "plugins")
         if not os.path.exists(plugins_dir):
-            plugins_dir = os.path.join(args.prefix if args.prefix else sys.prefix, "scripts/monailabel", "plugins")
+            plugins_dir = os.path.join(args.prefix if args.prefix else sys.prefix, "monailabel", "plugins")
 
         plugins = os.listdir(plugins_dir)
         plugins = [os.path.basename(a) for a in plugins]
@@ -221,7 +220,7 @@ class Main:
             print("Available Plugins are:")
             print("----------------------------------------------------")
             for k, v in resource.items():
-                print("  {:<30}: {}".format(k, v))
+                print(f"  {k:<30}: {v}")
             print("")
         else:
             plugin_dir = os.path.join(plugins_dir, args.name)
@@ -282,15 +281,15 @@ class Main:
             and not args.studies.startswith("https://")
             and not os.path.exists(args.studies)
         ):
-            print(f"STUDIES Directory {args.studies} NOT Found")
-            exit(1)
+            print(f"STUDIES Directory {args.studies} NOT Found;  Creating an EMPTY folder/placeholder")
+            os.makedirs(args.studies, exist_ok=True)
 
         args.app = os.path.realpath(args.app)
         if not args.studies.startswith("http://") and not args.studies.startswith("https://"):
             args.studies = os.path.realpath(args.studies)
 
         for arg in vars(args):
-            logger.info("USING:: {} = {}".format(arg, getattr(args, arg)))
+            logger.info(f"USING:: {arg} = {getattr(args, arg)}")
 
         for k, v in settings.dict().items():
             v = f"'{json.dumps(v)}'" if isinstance(v, list) or isinstance(v, dict) else v

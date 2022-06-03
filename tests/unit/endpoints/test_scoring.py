@@ -1,4 +1,4 @@
-# Copyright 2020 - 2021 MONAI Consortium
+# Copyright (c) MONAI Consortium
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -29,14 +29,14 @@ class EndPointScoring(BasicEndpointV3TestSuite):
         if not torch.cuda.is_available():
             return
 
-        response = self.client.post("/scoring/EPISTEMIC?run_sync=true")
+        response = self.client.post("/scoring/segmentation_spleen_epistemic?run_sync=true")
         assert response.status_code == 200
 
     def test_tta(self):
         if not torch.cuda.is_available():
             return
 
-        response = self.client.post("/scoring/TTA?run_sync=true")
+        response = self.client.post("/scoring/segmentation_spleen_tta?run_sync=true")
         assert response.status_code == 200
 
     def test_status(self):

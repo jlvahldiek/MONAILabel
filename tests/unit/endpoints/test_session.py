@@ -1,4 +1,4 @@
-# Copyright 2020 - 2021 MONAI Consortium
+# Copyright (c) MONAI Consortium
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -27,7 +27,7 @@ class EndPointSession(BasicEndpointTestSuite):
 
     def test_002_create_session(self):
         # global session_id, session_info
-        files = [("files", ("la_003.nii.gz", open(os.path.join(self.studies, "la_003.nii.gz"), "rb")))]
+        files = [("files", ("spleen_3.nii.gz", open(os.path.join(self.studies, "spleen_3.nii.gz"), "rb")))]
 
         response = self.client.put("/session/?expiry=600", files=files)
         assert response.status_code == 200
@@ -65,8 +65,8 @@ class EndPointSession(BasicEndpointTestSuite):
 
     def test_007_create_session_multiple_images(self):
         files = [
-            ("files", ("la_003.nii.gz", open(os.path.join(self.studies, "la_003.nii.gz"), "rb"))),
-            ("files", ("la_004.nii.gz", open(os.path.join(self.studies, "la_004.nii.gz"), "rb"))),
+            ("files", ("spleen_3.nii.gz", open(os.path.join(self.studies, "spleen_3.nii.gz"), "rb"))),
+            ("files", ("spleen_9.nii.gz", open(os.path.join(self.studies, "spleen_9.nii.gz"), "rb"))),
         ]
         params = {"client_id": "xyz"}
 

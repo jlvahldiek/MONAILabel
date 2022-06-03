@@ -1,4 +1,4 @@
-# Copyright 2020 - 2021 MONAI Consortium
+# Copyright (c) MONAI Consortium
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -17,8 +17,10 @@ import os
 import pathlib
 import shutil
 import subprocess
+import time
 
-import torch.cuda
+import torch
+from monai.apps import download_url
 
 logger = logging.getLogger(__name__)
 
@@ -71,7 +73,7 @@ def run_command(command, args=None, plogger=None):
         if line:
             plogger.info(line.rstrip()) if plogger else print(line)
 
-    plogger.info("Return code: {}".format(process.returncode))
+    plogger.info(f"Return code: {process.returncode}")
     process.stdout.close()
     return process.returncode
 
@@ -87,7 +89,7 @@ def init_log_config(log_config, app_dir, log_file, root_level=None):
 
         # if not os.path.exists(log_config):
         shutil.copy(default_config, log_config)
-        with open(log_config, "r") as f:
+        with open(log_config) as f:
             c = f.read()
 
         c = c.replace("${LOGDIR}", log_dir.replace("\\", r"\\"))
@@ -96,7 +98,7 @@ def init_log_config(log_config, app_dir, log_file, root_level=None):
         with open(log_config, "w") as f:
             f.write(c)
 
-    with open(log_config, "r") as f:
+    with open(log_config) as f:
         j = json.load(f)
 
     if root_level and j["root"]["level"] != root_level:
@@ -159,3 +161,23 @@ def gpu_memory_map():
 
 def gpu_count():
     return torch.cuda.device_count()
+
+
+def download_file(url, path, delay=1, skip_on_exists=True):
+    if skip_on_exists and os.path.exists(path):
+        return
+
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    logger.info(f"Downloading resource: {path} from {url}")
+
+    download_url(url, path)
+    if delay > 0:
+        time.sleep(delay)
+
+
+def device_list():
+    devices = [] if torch.cuda.is_available() else ["cpu"]
+    for i in range(torch.cuda.device_count()):
+        devices.append(f"cuda:{i}")
+
+    return devices

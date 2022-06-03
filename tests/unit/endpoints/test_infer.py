@@ -1,4 +1,4 @@
-# Copyright 2020 - 2021 MONAI Consortium
+# Copyright (c) MONAI Consortium
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -23,9 +23,20 @@ class EndPointInfer(BasicEndpointTestSuite):
             return
 
         model = "deepedit_seg"
-        image = "la_003"
+        image = "spleen_3"
 
         response = self.client.post(f"/infer/{model}?image={image}")
+        assert response.status_code == 200
+
+    def test_deepedit_no_clicks(self):
+        if not torch.cuda.is_available():
+            return
+
+        model = "deepedit"
+        image = "spleen_3"
+        params = {}
+
+        response = self.client.post(f"/infer/{model}?image={image}", data={"params": json.dumps(params)})
         assert response.status_code == 200
 
     def test_deepedit(self):
@@ -33,8 +44,8 @@ class EndPointInfer(BasicEndpointTestSuite):
             return
 
         model = "deepedit"
-        image = "la_003"
-        params = {"foreground": [[153, 175, 60]], "background": []}
+        image = "spleen_3"
+        params = {"spleen": [[140, 210, 28]], "background": []}
 
         response = self.client.post(f"/infer/{model}?image={image}", data={"params": json.dumps(params)})
         assert response.status_code == 200

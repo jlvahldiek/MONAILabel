@@ -1,4 +1,4 @@
-# Copyright 2020 - 2021 MONAI Consortium
+# Copyright (c) MONAI Consortium
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -32,6 +32,7 @@ from monailabel.endpoints import (
     scoring,
     session,
     train,
+    wsi_infer,
 )
 from monailabel.interfaces.utils.app import app_instance, clear_cache
 
@@ -63,6 +64,7 @@ app.mount(
 
 app.include_router(info.router, prefix=settings.MONAI_LABEL_API_STR)
 app.include_router(infer.router, prefix=settings.MONAI_LABEL_API_STR)
+app.include_router(wsi_infer.router, prefix=settings.MONAI_LABEL_API_STR)
 app.include_router(batch_infer.router, prefix=settings.MONAI_LABEL_API_STR)
 app.include_router(train.router, prefix=settings.MONAI_LABEL_API_STR)
 app.include_router(activelearning.router, prefix=settings.MONAI_LABEL_API_STR)

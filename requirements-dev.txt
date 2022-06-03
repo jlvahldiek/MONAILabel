@@ -16,12 +16,12 @@ pycodestyle
 pyflakes
 black
 isort
-pytype
+pytype; sys_platform != 'win32'
 mypy
-ninja
 parameterized
 types-PyYAML
 types-filelock
 types-requests
 click
 testresources
+pre-commit

@@ -1,4 +1,4 @@
-# Copyright 2020 - 2021 MONAI Consortium
+# Copyright (c) MONAI Consortium
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
@@ -19,12 +19,13 @@ from monailabel.interfaces.exception import MONAILabelError, MONAILabelException
 logger = logging.getLogger(__name__)
 
 
-def dump_data(data):
-    if logging.getLogger().level == logging.DEBUG:
-        logger.debug("**************************** DATA ********************************************")
+def dump_data(data, level=logging.DEBUG):
+    if logging.getLogger().level == level:
+        logger.log(level, "**************************** DATA ********************************************")
         for k in data:
             v = data[k]
-            logger.debug(
+            logger.log(
+                level,
                 "Data key: {} = {}".format(
                     k,
                     v.shape
@@ -32,9 +33,9 @@ def dump_data(data):
                     else v
                     if type(v) in (int, float, bool, str, dict, tuple, list)
                     else type(v),
-                )
+                ),
             )
-        logger.debug("******************************************************************************")
+        logger.log(level, "******************************************************************************")
 
 
 def shape_info(data, keys=("image", "label", "logits", "pred", "model", "points")):
@@ -42,7 +43,7 @@ def shape_info(data, keys=("image", "label", "logits", "pred", "model", "points"
     for key in keys:
         val = data.get(key) if hasattr(data, "get") else None
         if val is not None and hasattr(val, "shape"):
-            info.append("{}: {}({})".format(key, val.shape, val.dtype))
+            info.append(f"{key}: {val.shape}({val.dtype})")
     return "; ".join(info)
 
 
@@ -59,8 +60,8 @@ def run_transforms(data, callables, inverse=False, log_prefix="POST", log_name="
     :return: Processed data after running transforms
     """
     logger.setLevel(data.get("logging", "INFO").upper())
-    logger.info("{} - Run {}(s)".format(log_prefix, log_name))
-    logger.info("{} - Input Keys: {}".format(log_prefix, list(data.keys())))
+    logger.info(f"{log_prefix} - Run {log_name}(s)")
+    logger.info(f"{log_prefix} - Input Keys: {list(data.keys())}")
 
     if not callables:
         return data
@@ -82,7 +83,7 @@ def run_transforms(data, callables, inverse=False, log_prefix="POST", log_name="
             else:
                 raise MONAILabelException(
                     MONAILabelError.TRANSFORM_ERROR,
-                    "{} '{}' has no invert method".format(log_name, t.__class__.__name__),
+                    f"{log_name} '{t.__class__.__name__}' has no invert method",
                 )
         elif callable(t):
             if use_compose:
@@ -93,18 +94,18 @@ def run_transforms(data, callables, inverse=False, log_prefix="POST", log_name="
         else:
             raise MONAILabelException(
                 MONAILabelError.TRANSFORM_ERROR,
-                "{} '{}' is not callable".format(log_name, t.__class__.__name__),
+                f"{log_name} '{t.__class__.__name__}' is not callable",
             )
 
-        logger.info(
-            "{} - {} ({}): Time: {:.4f}; {}".format(
-                log_prefix,
-                log_name,
-                name,
-                float(time.time() - start),
-                shape_info(data),
-            )
-        )
+        latency = round(time.time() - start, 4)
+        stage = log_prefix.lower()
+        if data.get("latencies") is None:
+            data["latencies"] = {}
+        if data["latencies"].get(stage) is None:
+            data["latencies"][stage] = {}
+        data["latencies"][stage][name] = latency
+
+        logger.info(f"{log_prefix} - {log_name} ({name}): Time: {latency}; {shape_info(data)}")
         logger.debug("-----------------------------------------------------------------------------")
 
     dump_data(data)
