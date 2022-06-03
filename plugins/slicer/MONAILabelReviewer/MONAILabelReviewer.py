@@ -96,11 +96,11 @@ class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin
         # in batch mode, without a graphical user interface.
         self.logic = MONAILabelReviewerLogic()
 
-        self.setLightVersion()
         self.segmentEditorWidget = slicer.qMRMLSegmentEditorWidget()
         self.addSegmentator()
         self.ui.verticalLayout_10.addWidget(self.segmentEditorWidget)
         self.loadServerSelection()
+        self.setLightVersion()
 
         #  Section: Widget Elements
         self.ui.btn_connect_monai.clicked.connect(self.init_dicom_stream)
@@ -196,6 +196,10 @@ class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin
 
         self.collapseAllSecions()
 
+        if (self.segmentEditorWidget):
+            self.segmentEditorWidget.unorderedEffectsVisible = self.reviewersModeIsActive
+            self.segmentEditorWidget.setReadOnly(not self.reviewersModeIsActive)
+
     # Section:  Light version Option
 
     def setLightVersion(self):
@@ -242,6 +246,10 @@ class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin
             self.ui.btn_reviewers_mode.setChecked(False)
 
         self.collapseAllSecions()
+
+        if (self.segmentEditorWidget):
+            self.segmentEditorWidget.unorderedEffectsVisible = not self.reviewersModeIsActive
+            self.segmentEditorWidget.setReadOnly(self.reviewersModeIsActive)
 
     def cleanCache(self):
         self.logic = MONAILabelReviewerLogic()
@@ -988,8 +996,8 @@ class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin
         self.segmentEditorWidget.setSwitchToSegmentationsButtonVisible(False)
 
         self.segmentEditorWidget.setMRMLScene(slicer.mrmlScene)
-        self.segmentEditorWidget.unorderedEffectsVisible = False
-        self.segmentEditorWidget.setReadOnly(True)
+        self.segmentEditorWidget.unorderedEffectsVisible = self.reviewersModeIsActive
+        self.segmentEditorWidget.setReadOnly(not self.reviewersModeIsActive)
         self.segmentEditorWidget.setEffectNameOrder([])
 
     def displayLabelOfSegmentation(self):
