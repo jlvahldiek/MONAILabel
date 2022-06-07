@@ -196,10 +196,6 @@ class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin
 
         self.collapseAllSecions()
 
-        if (self.segmentEditorWidget):
-            self.segmentEditorWidget.unorderedEffectsVisible = self.reviewersModeIsActive
-            self.segmentEditorWidget.setReadOnly(not self.reviewersModeIsActive)
-
     # Section:  Light version Option
 
     def setLightVersion(self):
@@ -246,10 +242,6 @@ class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin
             self.ui.btn_reviewers_mode.setChecked(False)
 
         self.collapseAllSecions()
-
-        if (self.segmentEditorWidget):
-            self.segmentEditorWidget.unorderedEffectsVisible = not self.reviewersModeIsActive
-            self.segmentEditorWidget.setReadOnly(self.reviewersModeIsActive)
 
     def cleanCache(self):
         self.logic = MONAILabelReviewerLogic()
@@ -1016,6 +1008,14 @@ class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin
             segmentEditorNode.SetSingletonTag(segmentEditorSingletonTag)
             segmentEditorNode = slicer.mrmlScene.AddNode(segmentEditorNode)
         self.segmentEditorWidget.setMRMLSegmentEditorNode(segmentEditorNode)
+        
+        self.segmentEditorWidget.unorderedEffectsVisible = self.reviewersModeIsActive
+        self.segmentEditorWidget.setReadOnly(not self.reviewersModeIsActive)
+
+        # check if user allows overlapping segments
+        if slicer.util.settingsValue("MONAILabel/allowOverlappingSegments", False, converter=slicer.util.toBool):
+            # set segment editor to allow overlaps
+            segmentEditorNode.SetOverwriteMode(slicer.vtkMRMLSegmentEditorNode.OverwriteNone)
 
     def getDefaultMasterVolumeNodeID(self):
         layoutManager = slicer.app.layoutManager()
