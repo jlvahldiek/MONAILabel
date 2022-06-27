@@ -1,4 +1,5 @@
 import datetime
+#import json
 import logging
 import os
 import re
@@ -9,6 +10,7 @@ import qt
 import requests
 import SampleData
 import slicer
+from MONAILabelLib import MONAILabelClient
 from MONAILabelReviewerLib.ImageData import ImageData
 from MONAILabelReviewerLib.ImageDataController import ImageDataController
 from MONAILabelReviewerLib.MONAILabelReviewerEnum import Level, SegStatus
@@ -134,6 +136,8 @@ class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin
         self.ui.btn_reviewers_mode.clicked.connect(self.setReviewerVersion)
         self.ui.comboBox_clients.currentIndexChanged.connect(self.index_changed)
         self.ui.comboBox_reviewers.currentIndexChanged.connect(self.indexReviewerchanged)
+
+        self.ui.saveLabelButton.clicked.connect(self.saveLabelButtonClicked)
 
     def getCurrentTime(self):
         return datetime.datetime.now()
@@ -1035,6 +1039,66 @@ class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin
         # No background volume was found, so use the foreground volume (if any was found)
         return firstForegroundVolumeID
 
+    def saveLabelButtonClicked(self):
+        temp_dir = slicer.util.tempDirectory("slicer-monai-label")
+        image_id = self.currentImageData.getName()
+        client_id = self.ui.comboBox_reviewers.currentText
+        client = MONAILabelClient(self.ui.comboBox_server_url.currentText, temp_dir, client_id)
+        monailabel_widget = slicer.modules.monailabel.widgetRepresentation().self()
+
+        # get current label information
+        datastore = client.datastore()
+        current_label_info = datastore["objects"].get(image_id, None).get("labels", None).get("final", None).get("info", None)
+        
+        if current_label_info:
+            # download current label in a state before current modifications
+            # and store it under a non-final tag to track changes
+            old_label_path = client.download_label(label=image_id, tag="final")
+            initial_annotator = current_label_info.get("initial_annotator", None)
+            history = current_label_info.get("history", None)
+            if initial_annotator and len(history) > 0:
+                
+
+            result = client.save_label(
+                image_in=image_id,
+                label_in=old_label_path,
+                tag="final",
+                params={
+                    "initial_annotator": "Janis",
+                    "history": [{
+                        "timestamp": "timestamp",
+                        "annotator": "annotator name",
+                    }],
+                }
+            )
+
+        #return
+
+        # Save edited label
+        ## works only with .seg.nrrd format (at the moment no nift support)
+        segmentationNode = self.segmentEditorWidget.mrmlSegmentEditorNode().GetSegmentationNode()
+        label_in = tempfile.NamedTemporaryFile(suffix=monailabel_widget.file_ext, dir=temp_dir).name
+        success = slicer.util.saveNode(segmentationNode, label_in)
+
+        if success:
+            #image_id = self.currentImageData.getName()
+            result = client.save_label(
+                image_in=image_id,
+                label_in=label_in,
+                tag="final",
+                params={
+                    "initial_annotator": "Janis",
+                    "history": [{
+                        "timestamp": "timestamp",
+                        "annotator": "annotator name",
+                    }],
+                }
+            )
+            #print(result)
+            if result:
+                slicer.util.infoDisplay(
+                    "Label-Mask saved into MONAI Label Server\t\t", detailedText=json.dumps(result, indent=2)
+                )
 
 class MONAILabelReviewerLogic(ScriptedLoadableModuleLogic):
     """This class should implement all the actual
@@ -1180,7 +1244,8 @@ class MONAILabelReviewerLogic(ScriptedLoadableModuleLogic):
         download_uri = self.imageDataController.getDicomDownloadUri(image_id)
         sampleDataLogic = SampleData.SampleDataLogic()
         _volumeNode = sampleDataLogic.downloadFromURL(
-            nodeNames=node_name, fileNames=image_name, uris=download_uri, checksums=checksum
+            nodeNames=node_name, fileNames=image_name, uris=download_uri,
+            #checksums=checksum
         )[0]
 
     def setTempFolderDir(self):
