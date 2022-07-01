@@ -379,6 +379,9 @@
         <property name="enabled">
          <bool>false</bool>
         </property>
+        <property name="styleSheet">
+         <string notr="true">background-color: rgb(49, 195, 129);</string>
+        </property>
         <property name="text">
          <string>Save modified Label (overwrite prior)</string>
         </property>
