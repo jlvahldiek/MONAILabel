@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>555</width>
-    <height>847</height>
+    <height>899</height>
    </rect>
   </property>
   <layout class="QGridLayout" name="gridLayout">
@@ -369,14 +369,20 @@
           </widget>
          </widget>
         </item>
-        <item>
-         <widget class="QPushButton" name="saveLabelButton">
-          <property name="text">
-           <string>Save Label</string>
-          </property>
-         </widget>
-        </item>
        </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_11"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="saveLabelButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Save modified Label (overwrite prior)</string>
+        </property>
+       </widget>
       </item>
      </layout>
     </widget>

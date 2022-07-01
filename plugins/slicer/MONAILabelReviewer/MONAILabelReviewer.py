@@ -1,5 +1,5 @@
 import datetime
-#import json
+import json
 import logging
 import os
 import re
@@ -27,15 +27,13 @@ class MONAILabelReviewer(ScriptedLoadableModule):
         ScriptedLoadableModule.__init__(self, parent)
         self.parent.title = "MONAILabel Reviewer"
         self.parent.categories = ["Active Learning"]
-        self.parent.dependencies = []
-        self.parent.contributors = ["Minh Duc, Do (rAIdiance)"]
+        self.parent.dependencies = ["MONAILabel"]
+        self.parent.contributors = ["Minh Duc, Do", "Vahldiek, Janis"]
         self.parent.helpText = """
 This module provides the user to review on segmentations on X-Ray-dicom images.
 See more information in <a href="...">module documentation</a>.
 """
-        self.parent.acknowledgementText = """
-Developed by rAiDiance, and  funded by Berlin Institute of Health (BIH).
-"""
+        self.parent.acknowledgementText = ""
 
 
 class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin):
@@ -137,8 +135,6 @@ class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin
         self.ui.comboBox_clients.currentIndexChanged.connect(self.index_changed)
         self.ui.comboBox_reviewers.currentIndexChanged.connect(self.indexReviewerchanged)
 
-        self.ui.saveLabelButton.clicked.connect(self.saveLabelButtonClicked)
-
     def getCurrentTime(self):
         return datetime.datetime.now()
 
@@ -197,6 +193,9 @@ class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin
         self.ui.plainText_comment.show()
         if self.ui.btn_basic_mode.isChecked():
             self.ui.btn_basic_mode.setChecked(False)
+        
+        self.ui.saveLabelButton.enabled = True
+        self.ui.saveLabelButton.clicked.connect(self.saveLabelButtonClicked)
 
         self.collapseAllSecions()
 
@@ -245,6 +244,8 @@ class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin
         if self.ui.btn_reviewers_mode.isChecked():
             self.ui.btn_reviewers_mode.setChecked(False)
 
+        self.ui.saveLabelButton.enabled = False
+        
         self.collapseAllSecions()
 
     def cleanCache(self):
@@ -1006,6 +1007,7 @@ class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin
         # Select parameter set node if one is found in the scene, and create one otherwise
         segmentEditorSingletonTag = "SegmentEditor"
         segmentEditorNode = slicer.mrmlScene.GetSingletonNode(segmentEditorSingletonTag, "vtkMRMLSegmentEditorNode")
+
         if segmentEditorNode is None:
             segmentEditorNode = slicer.mrmlScene.CreateNodeByClass("vtkMRMLSegmentEditorNode")
             segmentEditorNode.UnRegister(None)
@@ -1053,26 +1055,34 @@ class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin
         if current_label_info:
             # download current label in a state before current modifications
             # and store it under a non-final tag to track changes
-            old_label_path = client.download_label(label=image_id, tag="final")
-            initial_annotator = current_label_info.get("initial_annotator", None)
-            history = current_label_info.get("history", None)
-            if initial_annotator and len(history) > 0:
-                
+            old_label_path = client.download_label(label_id=image_id, tag="final")
+            initial_annotator = current_label_info.get("initial_annotator", current_label_info["client_id"])
+            history = current_label_info.get("history", [])
+            save_name = "".join([c for c in initial_annotator if c.isalpha() or c.isdigit() or c==' ']).rstrip()
+            new_tag = f"originals_{save_name}"
+            dt = datetime.datetime.now()
+            ts = int(datetime.datetime.timestamp(dt))
+            default_history = [{
+                "timestamp": ts,
+                "annotator": initial_annotator,
+            }]
 
-            result = client.save_label(
-                image_in=image_id,
-                label_in=old_label_path,
-                tag="final",
-                params={
-                    "initial_annotator": "Janis",
-                    "history": [{
-                        "timestamp": "timestamp",
-                        "annotator": "annotator name",
-                    }],
-                }
-            )
-
-        #return
+            if len(history) > 0:
+                history.append({
+                    "timestamp": ts,
+                    "annotator": client_id,
+                })
+            else:
+                # save original
+                result = client.save_label(
+                    image_in=image_id,
+                    label_in=old_label_path,
+                    tag=new_tag,
+                    params={
+                        "initial_annotator": initial_annotator,
+                        "history": default_history,
+                    }
+                )
 
         # Save edited label
         ## works only with .seg.nrrd format (at the moment no nift support)
@@ -1081,20 +1091,15 @@ class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin
         success = slicer.util.saveNode(segmentationNode, label_in)
 
         if success:
-            #image_id = self.currentImageData.getName()
             result = client.save_label(
                 image_in=image_id,
                 label_in=label_in,
                 tag="final",
                 params={
-                    "initial_annotator": "Janis",
-                    "history": [{
-                        "timestamp": "timestamp",
-                        "annotator": "annotator name",
-                    }],
+                    "initial_annotator": initial_annotator,
+                    "history": default_history if len(history) == 0 else history,
                 }
             )
-            #print(result)
             if result:
                 slicer.util.infoDisplay(
                     "Label-Mask saved into MONAI Label Server\t\t", detailedText=json.dumps(result, indent=2)
