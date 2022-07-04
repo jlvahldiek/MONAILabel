@@ -54,7 +54,7 @@ class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin
         self.STATUS = SegStatus()
         self.LEVEL = Level()
 
-        self.selectedReviewer: str = ""
+        self.selectedReviewer: str = slicer.util.settingsValue("MONAILabel/clientId", "")
         self.selectedClientId: str = ""
         self.listImageData: List[ImageData] = None
         self.imageCounter: int = 0
@@ -195,7 +195,10 @@ class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin
             self.ui.btn_basic_mode.setChecked(False)
         
         self.ui.saveLabelButton.enabled = True
+        self.ui.saveLabelButton.show()
         self.ui.saveLabelButton.clicked.connect(self.saveLabelButtonClicked)
+
+        self.ui.comboBox_reviewers.addItem(self.selectedReviewer)
 
         self.collapseAllSecions()
 
@@ -245,12 +248,12 @@ class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin
             self.ui.btn_reviewers_mode.setChecked(False)
 
         self.ui.saveLabelButton.enabled = False
+        self.ui.saveLabelButton.hide()
         
         self.collapseAllSecions()
 
     def cleanCache(self):
         self.logic = MONAILabelReviewerLogic()
-        self.selectedReviewer = ""
         self.selectedClientId = ""
         self.listImageData = None
         self.imageCounter = 0
@@ -305,8 +308,6 @@ class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin
         self.ui.collapsibleButton_dicom_evaluation.collapsed = True
 
     def initUI(self):
-
-        self.selectedReviewer = self.ui.comboBox_reviewers.currentText
         if self.reviewersModeIsActive and self.selectedReviewer == "":
             warningMessage = "Missing reviewer's name.\nPlease enter your id or name in the reviewer's field!"
             slicer.util.warningDisplay(warningMessage)
@@ -361,9 +362,8 @@ class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin
         reviewers = self.logic.getReviewers()
         self.ui.comboBox_reviewers.addItem(self.selectedReviewer)
         for reviewer in reviewers:
-            if reviewer == self.selectedReviewer:
-                continue
-            self.ui.comboBox_reviewers.addItem(str(reviewer))
+            if reviewer != self.selectedReviewer:
+                self.ui.comboBox_reviewers.addItem(str(reviewer))
 
         # combobox in search section
         self.ui.comboBox_search_reviewer.addItem("All")
@@ -1042,68 +1042,71 @@ class MONAILabelReviewerWidget(ScriptedLoadableModuleWidget, VTKObservationMixin
         return firstForegroundVolumeID
 
     def saveLabelButtonClicked(self):
-        temp_dir = slicer.util.tempDirectory("slicer-monai-label")
-        image_id = self.currentImageData.getName()
-        client_id = self.ui.comboBox_reviewers.currentText
-        client = MONAILabelClient(self.ui.comboBox_server_url.currentText, temp_dir, client_id)
-        monailabel_widget = slicer.modules.monailabel.widgetRepresentation().self()
+        msg =   ("Confirm that the final label file will be overwritten by the actually displayed "
+                "segmentation. The prior label will be stored with the tag 'originals_initialAnnotatorName'.")
+        if slicer.util.confirmOkCancelDisplay(msg, "Confirm Overwrite"):
+            temp_dir = slicer.util.tempDirectory("slicer-monai-label")
+            image_id = self.currentImageData.getName()
+            client_id = self.ui.comboBox_reviewers.currentText
+            client = MONAILabelClient(self.ui.comboBox_server_url.currentText, temp_dir, client_id)
+            monailabel_widget = slicer.modules.monailabel.widgetRepresentation().self()
 
-        # get current label information
-        datastore = client.datastore()
-        current_label_info = datastore["objects"].get(image_id, None).get("labels", None).get("final", None).get("info", None)
-        
-        if current_label_info:
-            # download current label in a state before current modifications
-            # and store it under a non-final tag to track changes
-            old_label_path = client.download_label(label_id=image_id, tag="final")
-            initial_annotator = current_label_info.get("initial_annotator", current_label_info["client_id"])
-            history = current_label_info.get("history", [])
-            save_name = "".join([c for c in initial_annotator if c.isalpha() or c.isdigit() or c==' ']).rstrip()
-            new_tag = f"originals_{save_name}"
-            dt = datetime.datetime.now()
-            ts = int(datetime.datetime.timestamp(dt))
-            default_history = [{
-                "timestamp": ts,
-                "annotator": initial_annotator,
-            }]
-
-            if len(history) > 0:
-                history.append({
+            # get current label information
+            datastore = client.datastore()
+            current_label_info = datastore["objects"].get(image_id, None).get("labels", None).get("final", None).get("info", None)
+            
+            if current_label_info:
+                # download current label in a state before current modifications
+                # and store it under a non-final tag to track changes
+                old_label_path = client.download_label(label_id=image_id, tag="final")
+                initial_annotator = current_label_info.get("initial_annotator", current_label_info["client_id"])
+                history = current_label_info.get("history", [])
+                save_name = "".join([c for c in initial_annotator if c.isalpha() or c.isdigit() or c==' ']).rstrip()
+                new_tag = f"originals_{save_name}"
+                dt = datetime.datetime.now()
+                ts = int(datetime.datetime.timestamp(dt))
+                default_history = [{
                     "timestamp": ts,
-                    "annotator": client_id,
-                })
-            else:
-                # save original
+                    "annotator": initial_annotator,
+                }]
+
+                if len(history) > 0:
+                    history.append({
+                        "timestamp": ts,
+                        "annotator": client_id,
+                    })
+                else:
+                    # save original
+                    result = client.save_label(
+                        image_in=image_id,
+                        label_in=old_label_path,
+                        tag=new_tag,
+                        params={
+                            "initial_annotator": initial_annotator,
+                            "history": default_history,
+                        }
+                    )
+
+            # Save edited label
+            ## works only with .seg.nrrd format (at the moment no nift support)
+            segmentationNode = self.segmentEditorWidget.mrmlSegmentEditorNode().GetSegmentationNode()
+            label_in = tempfile.NamedTemporaryFile(suffix=monailabel_widget.file_ext, dir=temp_dir).name
+            success = slicer.util.saveNode(segmentationNode, label_in)
+
+            if success:
                 result = client.save_label(
                     image_in=image_id,
-                    label_in=old_label_path,
-                    tag=new_tag,
+                    label_in=label_in,
+                    tag="final",
                     params={
                         "initial_annotator": initial_annotator,
-                        "history": default_history,
+                        "history": default_history if len(history) == 0 else history,
                     }
                 )
-
-        # Save edited label
-        ## works only with .seg.nrrd format (at the moment no nift support)
-        segmentationNode = self.segmentEditorWidget.mrmlSegmentEditorNode().GetSegmentationNode()
-        label_in = tempfile.NamedTemporaryFile(suffix=monailabel_widget.file_ext, dir=temp_dir).name
-        success = slicer.util.saveNode(segmentationNode, label_in)
-
-        if success:
-            result = client.save_label(
-                image_in=image_id,
-                label_in=label_in,
-                tag="final",
-                params={
-                    "initial_annotator": initial_annotator,
-                    "history": default_history if len(history) == 0 else history,
-                }
-            )
-            if result:
-                slicer.util.infoDisplay(
-                    "Label-Mask saved into MONAI Label Server\t\t", detailedText=json.dumps(result, indent=2)
-                )
+                if result:
+                    slicer.util.infoDisplay(
+                        "Label-Mask saved into MONAI Label Server\t\t", detailedText=json.dumps(result, indent=2)
+                    )
 
 class MONAILabelReviewerLogic(ScriptedLoadableModuleLogic):
     """This class should implement all the actual
