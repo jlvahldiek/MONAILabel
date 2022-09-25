@@ -194,7 +194,6 @@ def itk_image_to_dicom_seg(label, series_dir, template):
 
 
 def dicom_seg_to_itk_image(label, output_type="nifti"):
-    # TODO:: Currently supports only one file
     filename = label if not os.path.isdir(label) else os.path.join(label, os.listdir(label)[0])
     with tempfile.TemporaryDirectory() as output_dir:
         command = "segimage2itkimage"
@@ -209,14 +208,17 @@ def dicom_seg_to_itk_image(label, output_type="nifti"):
             output_dir,
         ]
         run_command(command, args)
-        output_files = [f for f in os.listdir(output_dir) if f.startswith("segment") and f.endswith(".nii.gz")]
+        output_files = [os.path.join(output_dir, f) for f in os.listdir(output_dir) if f.startswith("segment") and f.endswith(".nii.gz")]
         if not output_files:
             logger.warning(f"Failed to convert DICOM-SEG {label} to NIFTI")
             return None
 
-        result_file = os.path.join(output_dir, output_files[0])
-        logger.info(f"Result/Output (NII) File: {result_file}")
-
+        result_image = SimpleITK.ReadImage(output_files)
         output_file = tempfile.NamedTemporaryFile(suffix=".nii.gz").name
-        shutil.move(result_file, output_file)
+        SimpleITK.WriteImage(result_image, output_file)
+
+        if not os.path.exists(output_file):
+            logger.warning(f"Failed to write ITK image {output_file}")
+            return None
+
         return output_file
