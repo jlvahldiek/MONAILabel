@@ -35,7 +35,7 @@ def dicom_to_nifti(series_dir, is_seg=False):
     start = time.time()
 
     if is_seg:
-        output_file = itk_dicom_seg_to_image(series_dir)
+        output_file = dicom_seg_to_itk_image(series_dir)
     else:
         # https://simpleitk.readthedocs.io/en/master/link_DicomConvert_docs.html
         if os.path.isdir(series_dir) and len(os.listdir(series_dir)) > 1:
@@ -193,7 +193,7 @@ def itk_image_to_dicom_seg(label, series_dir, template):
     return output_file
 
 
-def itk_dicom_seg_to_image(label, output_type="nifti"):
+def dicom_seg_to_itk_image(label, output_type="nifti"):
     # TODO:: Currently supports only one file
     filename = label if not os.path.isdir(label) else os.path.join(label, os.listdir(label)[0])
     with tempfile.TemporaryDirectory() as output_dir:
