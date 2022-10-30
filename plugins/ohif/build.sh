@@ -17,7 +17,13 @@ my_dir="$(dirname "$(readlink -f "$0")")"
 echo "Installing requirements..."
 sh $my_dir/requirements.sh
 
-install_dir=${1:-$my_dir/../../monailabel/endpoints/static/ohif}
+cat << EOF > get_path.py
+import os
+import monailabel
+print(os.path.dirname(monailabel.__file__))
+EOF
+install_dir=$(python get_path.py)/endpoints/static/ohif
+rm get_path.py
 
 echo "Current Dir: ${curr_dir}"
 echo "My Dir: ${my_dir}"
