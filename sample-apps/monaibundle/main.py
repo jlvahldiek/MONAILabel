@@ -32,7 +32,7 @@ logger = logging.getLogger(__name__)
 
 
 class MyApp(MONAILabelApp):
-    def __init__(self, app_dir, studies, conf):
+    def __init__(self, app_dir, studies, conf, labels=None):
         self.models = get_bundle_models(app_dir, conf)
         # Add Epistemic model for scoring
         self.epistemic_models = (
@@ -51,6 +51,7 @@ class MyApp(MONAILabelApp):
             name=f"MONAILabel - Zoo/Bundle ({monailabel.__version__})",
             description="DeepLearning models provided via MONAI Zoo/Bundle",
             version=monailabel.__version__,
+            labels=labels,
         )
 
     def init_infers(self) -> Dict[str, InferTask]:
