@@ -171,7 +171,7 @@ class BundleTrainTask(TrainTask):
 
     def _load_checkpoint(self, output_dir, pretrained, train_handlers):
         load_path = os.path.join(output_dir, self.const.model_pytorch()) if pretrained else None
-        if os.path.exists(load_path):
+        if load_path and os.path.exists(load_path):
             logger.info(f"Add Checkpoint Loader for Path: {load_path}")
 
             load_dict = {self.model_dict_key: f"$@{self.const.key_network()}"}
