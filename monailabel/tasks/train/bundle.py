@@ -79,10 +79,21 @@ class BundleConstants:
 
 
 class BundleTrainTask(TrainTask):
-    def __init__(self, path: str, conf: Dict[str, str], const: Optional[BundleConstants] = None):
+    def __init__(
+        self,
+        path: str,
+        conf: Dict[str, str],
+        const: Optional[BundleConstants] = None,
+        enable_tracking=False,
+        model_dict_key="model",
+        load_strict=False,
+    ):
         self.valid: bool = False
         self.conf = conf
         self.const = const if const else BundleConstants()
+        self.enable_tracking = enable_tracking
+        self.model_dict_key = model_dict_key
+        self.load_strict = load_strict
 
         config_paths = [c for c in self.const.configs() if os.path.exists(os.path.join(path, "configs", c))]
         if not config_paths:
@@ -115,15 +126,19 @@ class BundleTrainTask(TrainTask):
             "val_split": 0.2,  # VALIDATION SPLIT; -1 TO USE DEFAULT FROM BUNDLE
             "multi_gpu": True,  # USE MULTI-GPU
             "gpus": "all",  # COMMA SEPARATE DEVICE INDEX
-            "tracking": ["mlflow", "None"] if settings.MONAI_LABEL_TRACKING_ENABLED else ["None", "mlflow"],
+            "tracking": ["mlflow", "None"]
+            if self.enable_tracking and settings.MONAI_LABEL_TRACKING_ENABLED
+            else ["None", "mlflow"],
             "tracking_uri": settings.MONAI_LABEL_TRACKING_URI,
             "tracking_experiment_name": "",
         }
 
     def _fetch_datalist(self, request, datastore: Datastore):
-        return datastore.datalist()
+        datalist = datastore.datalist()
 
-    def _partition_datalist(self, datalist, request, shuffle=False):
+        # only use image and label attributes; skip for other meta info from datastore for now
+        datalist = [{"image": d["image"], "label": d["label"]} for d in datalist if d]
+
         if "detection" in request.get("model"):
             # Generate datalist for detection task, box and label keys are used by default.
             # Future: either use box and label keys for all detection models, or set these keys by config.
@@ -131,15 +146,17 @@ class BundleTrainTask(TrainTask):
                 with open(d["label"]) as fp:
                     json_object = json.loads(fp.read())  # load box coordinates from subject JSON
                     bboxes = [bdict["center"] + bdict["size"] for bdict in json_object["markups"]]
-                # Only support detection, classification label do not suppot in bundle yet, 0 is used for all positive boxes, wait for sync.
+
+                # Only support detection, classification label do not suppot in bundle yet,
+                # 0 is used for all positive boxes, wait for sync.
                 datalist[idx] = {"image": d["image"], "box": bboxes, "label": [0] * len(bboxes)}
-        else:
-            # only use image and label attributes; skip for other meta info from datastore for now
-            datalist = [{"image": d["image"], "label": d["label"]} for d in datalist if d]
 
-        logger.info(f"Total Records in Dataset: {len(datalist)}")
+        return datalist
 
+    def _partition_datalist(self, datalist, request, shuffle=False):
         val_split = request.get("val_split", 0.2)
+        logger.info(f"Total Records in Dataset: {len(datalist)}; Validation Split: {val_split}")
+
         if val_split > 0.0:
             train_datalist, val_datalist = partition_dataset(
                 datalist, ratios=[(1 - val_split), val_split], shuffle=shuffle
@@ -157,13 +174,13 @@ class BundleTrainTask(TrainTask):
         if os.path.exists(load_path):
             logger.info(f"Add Checkpoint Loader for Path: {load_path}")
 
-            load_dict = {"model": f"$@{self.const.key_network()}"}
+            load_dict = {self.model_dict_key: f"$@{self.const.key_network()}"}
             if not [t for t in train_handlers if t.get("_target_") == CheckpointLoader.__name__]:
                 loader = {
                     "_target_": CheckpointLoader.__name__,
                     "load_path": load_path,
                     "load_dict": load_dict,
-                    "strict": False,
+                    "strict": self.load_strict,
                 }
                 train_handlers.insert(0, loader)
 
@@ -186,7 +203,9 @@ class BundleTrainTask(TrainTask):
         device = request.get("device", "cuda")
         logger.info(f"Using device: {device}; Type: {type(device)}")
 
-        tracking = request.get("tracking", "mlflow" if settings.MONAI_LABEL_TRACKING_ENABLED else "")
+        tracking = request.get(
+            "tracking", "mlflow" if self.enable_tracking and settings.MONAI_LABEL_TRACKING_ENABLED else ""
+        )
         tracking = tracking[0] if isinstance(tracking, list) else tracking
         tracking_uri = request.get("tracking_uri")
         tracking_uri = tracking_uri if tracking_uri else settings.MONAI_LABEL_TRACKING_URI
@@ -264,21 +283,28 @@ class BundleTrainTask(TrainTask):
             if tracking:
                 cmd.extend(["--tracking", tracking])
                 if tracking_uri:
-                    cmd.extend(["tracking_uri", tracking_uri])
+                    cmd.extend(["--tracking_uri", tracking_uri])
 
-            self.run_command(cmd, env)
+            self.run_multi_gpu(request, cmd, env)
         else:
-            monai.bundle.run(
-                "training",
-                meta_file=self.bundle_metadata_path,
-                config_file=self.bundle_config_path,
-                **overrides,
-            )
+            self.run_single_gpu(request, overrides)
 
         logger.info("Training Finished....")
         return {}
 
-    def run_command(self, cmd, env):
+    def run_single_gpu(self, request, overrides):
+        monai.bundle.run(
+            "training",
+            meta_file=self.bundle_metadata_path,
+            config_file=self.bundle_config_path,
+            **overrides,
+        )
+
+    def run_multi_gpu(self, request, cmd, env):
+        self._run_command(cmd, env)
+
+    def _run_command(self, cmd, env):
+        logger.info(f"RUNNING COMMAND:: {cmd}")
         process = subprocess.Popen(cmd, stdout=subprocess.PIPE, universal_newlines=True, env=env)
         while process.poll() is None:
             line = process.stdout.readline()

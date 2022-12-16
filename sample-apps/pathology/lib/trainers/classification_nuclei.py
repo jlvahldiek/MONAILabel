@@ -25,7 +25,7 @@ logger = logging.getLogger(__name__)
 
 class ClassificationNuclei(BundleTrainTask):
     def __init__(self, path: str, conf: Dict[str, str], const: Optional[BundleConstants] = None):
-        super().__init__(path, conf, const)
+        super().__init__(path, conf, const, enable_tracking=True)
         self.labels = {
             "Other": 1,
             "Inflammatory": 2,
