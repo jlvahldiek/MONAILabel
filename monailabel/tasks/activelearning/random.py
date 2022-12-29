@@ -46,3 +46,32 @@ class Random(Strategy):
         logger.debug(f"Random: Images: {images}; Weight: {weights}")
         logger.info(f"Random: Selected Image: {image}; Weight: {weights[0]}")
         return {"id": image, "weight": weights[0]}
+
+class MyRandom(Strategy):
+    """
+    Consider implementing a random strategy for active learning
+    """
+
+    def __init__(self):
+        super().__init__("Random Strategy")
+
+    def __call__(self, request, datastore: Datastore):
+        label_tag = request.get("label_tag")
+        labels = request.get("labels")
+        images = datastore.get_unlabeled_images(label_tag, labels)
+        if not len(images):
+            return None
+
+        strategy = request["strategy"]
+        images_ts = []
+        for image_id in images:
+            ts = datastore.get_ts(image_id, strategy)
+            images_ts.append(ts)
+
+        current_ts = int(time.time())
+        weights = [current_ts - ts for ts in images_ts]
+
+        image = random.choices(images, weights=weights)[0]
+        logger.debug(f"Random: Images: {images}; Weight: {weights}")
+        logger.info(f"Random: Selected Image: {image}; Weight: {weights[0]}")
+        return {"id": image, "weight": weights[0]}

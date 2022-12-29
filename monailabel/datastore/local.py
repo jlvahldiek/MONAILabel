@@ -292,6 +292,13 @@ class LocalDatastore(Datastore):
             info["path"] = path
         return info
 
+    def get_image_ts(self, image_id: str, strategy: str) -> Dict[str, Any]:
+        obj = self._datastore.objects.get(image_id)
+        info = obj.image.info if obj else {}
+        ts = info.get("strategy", {}).get(strategy, {}).get("ts", 0)
+
+        return ts
+
     def get_label(self, label_id: str, label_tag: str, params=None) -> Any:
         """
         Retrieve image object based on label id
