@@ -114,6 +114,9 @@ class XNATDatastore(Datastore):
             info.update({"project": project, "subject": subject, "experiment": experiment, "scan": scan})
         return info
 
+    def get_image_ts(self, image_id: str, strategy: str) -> int:
+        raise NotImplementedError
+
     def get_label_info(self, label_id: str, label_tag: str) -> Dict[str, Any]:
         return {}
 

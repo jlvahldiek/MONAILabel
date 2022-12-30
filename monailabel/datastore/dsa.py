@@ -172,6 +172,9 @@ class DSADatastore(Datastore):
     def get_image_info(self, image_id: str) -> Dict[str, Any]:
         return self.gc.getItem(image_id)  # type: ignore
 
+    def get_image_ts(self, image_id: str, strategy: str) -> int:
+        raise NotImplementedError
+
     def get_label_info(self, label_id: str, label_tag: str) -> Dict[str, Any]:
         return {}
 

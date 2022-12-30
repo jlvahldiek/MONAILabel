@@ -142,6 +142,17 @@ class Datastore(metaclass=ABCMeta):
         pass
 
     @abstractmethod
+    def get_image_ts(self, image_id: str, strategy: str) -> int:
+        """
+        Get the image timestamp for the given image id and the given strategy
+
+        :param image_id: the desired image id
+        :param strategy: the according strategy
+        :return: image timestamp as int
+        """
+        pass
+
+    @abstractmethod
     def get_label_info(self, label_id: str, label_tag: str) -> Dict[str, Any]:
         """
         Get the label information for the given label id

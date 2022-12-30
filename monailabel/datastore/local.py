@@ -292,11 +292,17 @@ class LocalDatastore(Datastore):
             info["path"] = path
         return info
 
-    def get_image_ts(self, image_id: str, strategy: str) -> Dict[str, Any]:
+    def get_image_ts(self, image_id: str, strategy: str) -> int:
+        """
+        Get the image timestamp for the given image id and the given strategy
+
+        :param image_id: the desired image id
+        :param strategy: the according strategy
+        :return: image timestamp as int
+        """
         obj = self._datastore.objects.get(image_id)
         info = obj.image.info if obj else {}
         ts = info.get("strategy", {}).get(strategy, {}).get("ts", 0)
-
         return ts
 
     def get_label(self, label_id: str, label_tag: str, params=None) -> Any:
