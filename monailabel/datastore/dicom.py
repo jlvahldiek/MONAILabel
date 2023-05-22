@@ -134,7 +134,7 @@ class DICOMWebDatastore(LocalDatastore):
 
     @cached(cache=TTLCache(maxsize=16, ttl=settings.MONAI_LABEL_DICOMWEB_CACHE_EXPIRY))
     def get_labeled_images(self, label_tag: Optional[str] = None, labels: Optional[List[str]] = None) -> List[str]:
-        datasets = self._client.search_for_series(search_filters={"Modality": "SEG"})
+        datasets = self._client.search_for_series(search_filters=settings.MONAI_LABEL_DICOMWEB_SEARCH_FILTER)
         all_segs = [Dataset.from_json(ds) for ds in datasets]
 
         image_series = []
